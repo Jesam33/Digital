@@ -4,11 +4,6 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
-.button {
-    background-color: transparent !important;
-    font-size: 25px !important;
-}
 .navbar-toggler-icon {
     font-size: 20px !important;
     font-weight: 600;
@@ -30,7 +25,6 @@
     transition: all ease-in-out 0.4s;
     column-gap: 30px !important;
   }
-  
   .cta-button:hover {
     background-color: transparent;
     border: 2px solid #5f1782;
@@ -39,32 +33,6 @@
     transition: all ease-in-out 0.4s;
     font-weight: 600 !important;
   }
-  
-  
-  .services ul {
-    list-style: none;
-  }
-  
-  .services ul li {
-    margin-bottom: 20px;
-  }
-  
-  .services ul li img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-  
-  .testimonials .testimonial {
-   
-    margin-bottom: 10px;
-  }
-  
-  .testimonials .customer-name {
-    text-align: right;
-    font-style: italic;
-  }
-  
   .cta-section {
     text-align: center;
     margin: 20px 0;
@@ -75,9 +43,7 @@
   }
   textarea::placeholder {
     font-style: italic;
-
   }
-  
   footer {
     background-color: #333;
     color: #fff;
@@ -87,11 +53,9 @@
   .social-media-icons i:hover {
     color: #b970c4 !important;
   }
-  
   .social-media-icons a {
     margin: 0 10px;
   }
-  
   body h2 {
     color: #5f1782 !important;
   }
