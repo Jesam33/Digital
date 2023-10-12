@@ -1,0 +1,98 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.button {
+    background-color: transparent !important;
+    font-size: 25px !important;
+}
+.navbar-toggler-icon {
+    font-size: 20px !important;
+    font-weight: 600;
+}
+#banner {
+    background-image: linear-gradient(to right, #a517ba, #5f1782) !important;
+    color: white;
+    padding-top: 5% !important;
+}
+.cta-button {
+    padding: 12px 35px;
+    font-size: 18px;
+    background-color: #a517ba;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 10px;
+    transition: all ease-in-out 0.4s;
+    column-gap: 30px !important;
+  }
+  
+  .cta-button:hover {
+    background-color: transparent;
+    border: 2px solid #5f1782;
+    color: #5f1782;
+    transform: scale(1.1);
+    transition: all ease-in-out 0.4s;
+    font-weight: 600 !important;
+  }
+  
+  
+  .services ul {
+    list-style: none;
+  }
+  
+  .services ul li {
+    margin-bottom: 20px;
+  }
+  
+  .services ul li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .testimonials .testimonial {
+   
+    margin-bottom: 10px;
+  }
+  
+  .testimonials .customer-name {
+    text-align: right;
+    font-style: italic;
+  }
+  
+  .cta-section {
+    text-align: center;
+    margin: 20px 0;
+  }
+  textarea {
+    width: 100% !important;
+    padding: 10px;
+  }
+  textarea::placeholder {
+    font-style: italic;
+
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  .social-media-icons i:hover {
+    color: #b970c4 !important;
+  }
+  
+  .social-media-icons a {
+    margin: 0 10px;
+  }
+  
+  body h2 {
+    color: #5f1782 !important;
+  }
+
