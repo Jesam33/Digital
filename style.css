@@ -1,0 +1,42 @@
+.dark-mode {
+    background-color: rgb(24, 8, 34);
+    color: white;
+  }
+  .dark-mode h2 {
+      color: white !important;
+  }
+  .dark-mode #banner {
+      background-image: linear-gradient(to right, #130714, #311b3b) !important;
+  }
+  .dark-mode .navbar {
+      background-image: linear-gradient(to right, #130714, #311b3b) !important;
+  }
+  .dark-mode  .container {
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px !important;
+      padding: 40px 20px !important;
+  }
+  .dark-mode .banner-cont {
+      box-shadow: none !important;
+  }
+  .dark-mode textarea {
+      background-color: #3a2146;
+      border: none !important;
+      border-radius: 10px !important;
+      padding-left: 20px;
+  }
+  .dark-mode .bi-list {
+    color: white !important;
+  }
+  .dark-mode .cta-button:hover {
+      transition: all ease-in-out 1s !important;
+  }
+  .dark-mode .div img {
+      display: none !important;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none !important;
+    border: none !important;
+  }
+  .navbar-toggler {
+    border: none !important;
+  }
