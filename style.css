@@ -150,32 +150,4 @@ color: #5f1782 !important;
   .team-img .card {
     box-shadow: none !important;
   }
-  .rounded {
-    border-radius: 50% !important;
-}
-.rounded img {
-    width: 50% !important;
-    border-radius: 50% !important;
-}
-.rounded img:hover {
-    filter: grayscale(0) !important;
-}
-
-.testimony .card {
-  box-shadow: none !important;
-  background-color: transparent !important;
-}
-.testimony .card img  {
-  width: 70% !important;
-  filter: grayscale(100) !important;
-  border: 4px dotted #640a80 !important;
-}
-.testimony .card img:hover {
-  filter: grayscale(0) !important;
-}
-.test-img {
-  background-color: #5e178277 !important;
-  background-color: transparent !important;
-  margin-bottom: 20px !important;
-  /* border-radius: 40% !important; */
-}
+  
