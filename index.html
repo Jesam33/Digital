@@ -15,6 +15,10 @@
     <!-- AOS LIBRARY -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="form.html">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="script.js"></script>
 
 </head>
@@ -36,6 +40,37 @@
     .navbar-toggler-icon {
     font-size: 20px !important;
     font-weight: 600;
+}
+.direct {
+  display: flex !important;
+  align-items: center !important;
+  column-gap: 20px !important;
+  
+}
+ .direct {
+  display: flex !important;
+  width: 30% !important;
+}
+.direct-img {
+  width: 30% !important;
+}
+.direct-img img {
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: center;
+    border: 2px solid #640a80 !important;
+    border-radius: 50% !important;
+    filter: grayscale(100);
+}
+.div-txt {
+  width: 70% !important;
+ 
+}
+.testimony .card img  {
+  filter: grayscale(100) !important;
+}
+.testimony .card img:hover {
+  filter: grayscale(0) !important;
 }
 #banner {
     background-image: linear-gradient(to right, #a517ba, #5f1782) !important;
@@ -66,6 +101,9 @@
   .color {
     background-color: #5f1782 !important;
   }
+  .txt-color {
+  color: #5f1782 !important;
+  }
   textarea::placeholder {
     font-style: italic;
   }
@@ -82,6 +120,69 @@
     color: #5f1782 !important;
   }
 
+  .curve-box-1 {
+    content: "";
+    height: 50px;
+    width: 50px;
+    background-color: white !important;
+    position: absolute;
+    bottom: -1%;
+    right: -1%;
+    outline: none;
+    border: none !important;
+    border-top-left-radius: 100%;
+  }
+  .curve-box-2 {
+    content: "";
+    height: 50px;
+    width: 50px;
+    background-color: white !important;
+    position: absolute;
+    bottom: -1%;
+    left: -1%;
+    outline: none;
+    border: none !important;
+    border-top-right-radius: 100%;
+  }
+  .curve-box-3 {
+    content: "";
+    height: 50px;
+    width: 50px;
+    background-color: white !important;
+    position: absolute;
+    top: -1%;
+    right: -1%;
+    outline: none;
+    border: none !important;
+    border-bottom-left-radius: 100%;
+  }
+  .curve-box-4 {
+    content: "";
+    height: 50px;
+    width: 50px;
+    background-color: white !important;
+    position: absolute;
+    top: -1%;
+    left: -1%;
+    outline: none;
+    border: none !important;
+    border-bottom-right-radius: 100%;
+  }
+
+    .curved-div {
+      border: none !important;
+    }
+  
+    .aim {
+      width: fit-content;
+      /* padding: 100px 30px !important; */
+    }
+    li {
+      list-style: none !important;
+    }
+    .font {
+      font-family: 'Poppins', sans-serif !important;
+    }
 
 </style>
 <body>
@@ -96,9 +197,6 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-underline pt-5 pt-lg-0">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="service.html">SERVICES</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="about-us.html ">ABOUT US</a>
@@ -141,55 +239,117 @@
         </div>
     </section>
     <!-- about us -->
-    <section class="  my-5 py-5 ">
-       <div class="container">
-        <h2 class="fs-1" data-aos="fade-down"  data-aos-duration="3000" >ABOUT US</h2>
-        <p data-aos="fade-down"  data-aos-duration="1000"> 
-            Welcome to [Your Digital Agency]!
-            
-            At [Your Digital Agency], we are more than just a team of experts in the digital realm. We're innovators, strategists, and creators committed to crafting digital experiences that elevate brands and captivate audiences.
-            
-            Our journey began with a shared passion for embracing the ever-evolving landscape of technology. Today, we stand at the forefront of digital transformation, empowering businesses of all sizes to thrive in the digital age.
-            
-            Our mission is simple: to transform your vision into reality. We collaborate closely with our clients, immersing ourselves in your objectives to deliver tailor-made solutions that exceed expectations. Whether it's web design, mobile applications, digital marketing, or branding, we bring expertise and creativity to every project.
-            
-            What sets us apart is our dedication to excellence and a client-centric approach. We believe in transparency, clear communication, and delivering on promises. Your success is our success, and we're committed to navigating the digital world together, helping you achieve your goals.
-            
-            Join us on this exciting journey, and let's create remarkable digital experiences that leave a lasting impact.
-            </p>
-       </div>
-      </section>
+  
     
-      <!-- Services Section -->
-      <section class="services my-5 py-5">
-        <div class="container ">
-            <h2 class="fs-1" data-aos="fade-down"  data-aos-duration="3000" >OUR SERVICES</h2>
-            <p data-aos="fade-down"  data-aos-duration="1000">
-                 At our Digital Agency, we specialize in crafting eye-catching, functional, and user-friendly websites that propel your brand's online presence to new heights. We understand that a compelling website is the digital face of your business, and we're dedicated to making that face unforgettable.
-                
-                Our web design and development services are a fusion of creativity, technical expertise, and strategic thinking. We start by gaining a deep understanding of your brand, target audience, and business objectives. Armed with this knowledge, we design visually stunning websites that align seamlessly with your brand identity and values.
-                
-                **Key Features:**
-                <ol data-aos="fade-down"  data-aos-duration="1000">
-                    <li><strong>Custom Design:</strong> We create unique designs tailored to your brand, ensuring a standout online presence.</li>
-                    <li><strong>Responsive Design:</strong> Your website will look and function flawlessly on various devices, from desktops to smartphones.</li>
-                    <li><strong>Intuitive Navigation:</strong> We optimize user experience by designing intuitive navigation that guides visitors seamlessly through your site.</li>
-                    <li><strong>Optimized Performance:</strong> We focus on speed and performance optimization to keep your website running at peak efficiency.
-                    </li>
-                    <li><strong>Content Management System (CMS):</strong> We offer easy-to-use CMS solutions, enabling you to manage and update your content effortlessly.
-                    </li>
-                    <li><strong>E-commerce Functionality:</strong> For businesses looking to sell products online, we develop secure and efficient e-commerce platforms.</li>
-                </ol>
-                
-                <p data-aos="fade-down"  data-aos-duration="1000"> Our expert development team brings designs to life using the latest technologies and coding standards. We ensure your website is not only visually appealing but also functional, secure, and optimized for search engines (SEO). Every line of code we write is a step towards enhancing your online reach and engaging your audience effectively.
-                
-                Let's collaborate to create a captivating digital hub that represents your brand, drives user engagement, and achieves your business goals.</p>
-             </p>
+      <section class="mt-4 py-5">
+          <div class="container py-4">
+            <div class="row">
+              <div class="col-lg-6" style="font-family: 'Poppins', sans-serif; ">
+                    <h2><strong class="display-5" style="font-weight: 600;">Services</strong> we can help you with ! </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam magni deserunt enim! Minima corporis ea, quaerat voluptatibus fugiat distinctio accusamus nobis aliquam perferendis unde velit dolorem aspernatur autem eum praesentium.</p>
+                <ul  style="list-style: none;" class="p-0">
+                  <li >Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+                  <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+
+                <div >
+                    <div class="direct ">
+                      <div class="direct-img">
+                        <img src="./images/testimonial-1.png" alt="" width="10%">
+                      </div>
+                      <div class="div-txt">
+                        <p class="m-auto fw-bold txt-color">CEO, Director</p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="container text-center">
+                  <div class="row">
+                    <div class="col-lg-6 mb-4 ">
+                      <div class="card curved-div   text-white py-3" style="font-family: 'Poppins', sans-serif; background-color: #00A1F1 ;" >
+                        <i class="bi bi-code-slash fs-1 display-1"></i>
+                        <div class="card-body">
+                          <h5 class="card-title fw-bold" style="font-family: 'Poppins', sans-serif;" >WEBSITE</h5>
+                          <p class="card-text p-0 fw-bold" style="font-family: 'Poppins', sans-serif;">DEVELOPMENT</p>
+                        </div>
+                        <div class="curve-box-1"></div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-lg-6 mb-4">
+                      <div class="card curved-div text-white py-3" style="font-family: 'Poppins', sans-serif; background-color: #7CBB00;" >
+                        <i class="bi bi-bezier fs-1 display-1"></i>
+                        <div class="card-body">
+                          <h5 class="card-title ">Website</h5>
+                          <p class="card-text p-0">Development</p>
+                        </div>
+                        <div class="curve-box-2"></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                      <div class="card curved-div   text-white py-3" style="font-family: 'Poppins', sans-serif; background-color: #FFB900;" >
+                        <i class="bi bi bi-body-text fs-1 display-1"></i>
+                        <div class="card-body">
+                          <h5 class="card-title ">Website</h5>
+                          <p class="card-text p-0">Development</p>
+                        </div>
+                        <div class="curve-box-3"></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                      <div class="card curved-div  text-white py-3" style="font-family: 'Poppins', sans-serif; background-color: #FF3B30;" >
+                        <i class="bi bi-sliders fs-1 display-1"></i>
+                        <div class="card-body">
+                          <h5 class="card-title ">Website</h5>
+                          <p class="card-text p-0">Development</p>
+                        </div>
+                        <div class="curve-box-4"></div>
+                      </div>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+        </div>
+      </section>
+
+
+      <!-- blog -->
+      <section class="color " >
+        <div class="container mt-4 py-5 ">
+          <div class="row">
+            <div class="col-lg-6 ">
+              <div class="aim py-5 px-5">
+                <p style="font-family: 'Poppins', sans-serif;" class="text-white fw-bold fs-1 display-1" ><span>Mission</span> We <br/>
+                  Aim For You!</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="progress mb-2" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 25%;">
+                <div class="progress-bar bg-info text-dark" style="width: 85%">85%</div>
+              </div>
+              <div class="progress mb-2" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 25%;">
+                <div class="progress-bar bg-warning text-dark" style="width: 95%">95%</div>
+              </div>
+              <div class="progress mb-2" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 25%;">
+                <div class="progress-bar bg-danger" style="width: 92%">92%</div>
+              </div>
+              <ul class="d-flex text-center">
+                <li class="px-3 bg-info " style="font-family: 'Poppins', sans-serif;">MARKETING</li>
+                <li class="px-3 bg-warning " style="font-family: 'Poppins', sans-serif;">SOLUTION</li>
+                <li class="px-3 bg-danger " style="font-family: 'Poppins', sans-serif;">SERVICES</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     
       <!-- Testimonials Section -->
-      <section class="testimonials">
+      <!-- <section class="testimonials">
        <div class="container">
         <h2 class="fs-1 data-aos="fade-down"  data-aos-duration="3000"">TESTIMONIALS</h2>
         <p data-aos="fade-down"  data-aos-duration="1000"> 
@@ -208,36 +368,64 @@
           <textarea name="" id="" cols="" rows="10" placeholder="Customer testimonial goes here." class="mt-5 p-3 w-100" ></textarea>
           <p class="customer-name">- John Doe</p>
         Add more testimonials as needed
-      </section>
+      </section> -->
 
-
-<!-- contact us -->
-<section class="services my-5 py-5">
-    <div class="container">
-        <h2 class="fs-1" data-aos="fade-down"  data-aos-duration="3000">CONTACT US</h2>
-        <p data-aos="fade-down"  data-aos-duration="1000">
-            Contact Us
-            Have questions or inquiries about our digital services? We'd love to hear from you!
-            
-            At [Your Digital Agency], we're here to assist you in every step of your digital journey. Whether you're looking for a consultation, need more information about our services, or want to discuss a potential collaboration, we're just a message away.
-            
-            Get in touch with us via:
-            <ul data-aos="fade-down"  data-aos-duration="1000">
-                <li class="">Email: info@yourdigitalagency.com</li>
-                <li>Phone: +123-456-7890</li>
-                <li>Office Hours: Monday to Friday, 9:00 AM - 5:00 PM (Your Timezone)</li>
-            </ul>
-            Our dedicated team of experts is ready to answer your queries and provide the information you need to make informed decisions for your business. We value your time and will strive to respond to your inquiries promptly.
-            
-            Additionally, you can fill out the contact form below, and we'll reach out to you as soon as possible.
-         </p>
-
-        <div class="container text-center">
-            <div class="btn color text-white">Book A service</div>
+<!-- portfolio -->
+    <section class="my-5 py-4">
+      <div class="container">
+        <div class="titile">
+          <h1 class="txt-color font fw-4 text-center">ACTIVITIES WE COMPLETED</h1>
+          <p class="txt-color font text-center" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque et eum architecto, ipsum odit nobis sit nulla, totam eius libero culpa nesciunt dolor consequatur aspernatur! Veniam in ullam ratione quas?</p>
         </div>
-    </div>
-  </section>
-     
+          <div class="row my-4 py-5 testimony">
+            <div class="col-lg-4">
+              <div class="card curved-div mb-4 ">
+                <img src="./images/port-1.jpg" class="card-img-top " alt="...">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card curved-div ">
+                <img src="./images/port-2.jpg" class="card-img-top" alt="...">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card curved-div ">
+                <img src="./images/port-8.jpg" class="card-img-top" alt="...">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card curved-div mb-4 ">
+                <img src="./images/port-4.jpg" class="card-img-top " alt="...">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card curved-div ">
+                <img src="./images/port-5.jpg" class="card-img-top " alt="...">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card curved-div ">
+                <img src="./images/port-6.png" class="card-img-top" alt="...">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card curved-div ">
+                <img src="./images/port-7.jpg" class="card-img-top" alt="...">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card curved-div ">
+                <img src="./images/port-8.jpg" class="card-img-top" alt="...">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card curved-div ">
+                <img src="./images/port-2.jpg" class="card-img-top" alt="...">
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
     
       <!-- CTA Buttons -->
       
