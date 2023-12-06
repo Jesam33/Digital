@@ -1,457 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- css -->
-    <link rel="stylesheet" href="style.css">
-    <!-- font awesome -->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <!-- bootstrap icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- AOS LIBRARY -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="form.html">
-    <!-- fonts -->
+
+    <!-- Google Fonts CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Main styling -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Boxicons CSS  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Subsidiary styling -->
+    <link rel="stylesheet" href="./css/subsidiary.css">
+    <title>RIDEREADY</title>
+
+    <!-- AOS link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Users login stylesheet -->
+    <link rel="stylesheet" href="./css/users-login.css">
 </head>
-<style>
-    body {
-        overflow-x: hidden !important;
-    }
-    .navbar-brand {
-        padding-left: 10px;
-    }
-    ul {
-        padding: 0px 10px;
-    }
-        nav li a:hover {
-        color: #640a80 !important;
-    }
-    /* subs */
 
-    .navbar-toggler-icon {
-    font-size: 20px !important;
-    font-weight: 600;
-}
-.direct {
-  display: flex !important;
-  align-items: center !important;
-  column-gap: 20px !important;
-  
-}
- .direct {
-  display: flex !important;
-  width: 30% !important;
-}
-.direct-img {
-  width: 30% !important;
-}
-.direct-img img {
-    width: 100% !important;
-    align-items: center !important;
-    justify-content: center;
-    border: 2px solid #640a80 !important;
-    border-radius: 50% !important;
-    filter: grayscale(100);
-}
-.div-txt {
-  width: 70% !important;
- 
-}
-.testimony .card img  {
-  filter: grayscale(100) !important;
-}
-.testimony .card img:hover {
-  filter: grayscale(0) !important;
-}
-#banner {
-    background-image: linear-gradient(to right, #a517ba, #5f1782) !important;
-}
-.cta-button {
-    padding: 12px 35px;
-    font-size: 18px;
-    background-color: #a517ba;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
-    border-radius: 10px;
-    transition: all ease-in-out 0.4s;
-    column-gap: 30px !important;    
-    font-weight: 600 !important;
-
-  }
-  .cta-button:hover {
-    background-color: transparent;
-    border: 2px solid #5f1782;
-    color: #5f1782 !importantit ;
-    transform: scale(1.1);
-    transition: all ease-in-out 0.4s;
-  }
-  .cta-section {
-    margin: 20px 0;
-  }
-  .color {
-    background-color: #5f1782 !important;
-  }
-  .txt-color {
-  color: #5f1782 !important;
-  }
-  textarea::placeholder {
-    font-style: italic;
-  }
-  footer {
-    background-color: #333;
-  }
-  .social-media-icons i:hover {
-    color: #b970c4 !important;
-  }
-  .social-media-icons a {
-    margin: 0 10px;
-  }
-  body h2 {
-    color: #5f1782 !important;
-  }
-
-  .curve-box-1 {
-    content: "";
-    height: 50px;
-    width: 50px;
-    background-color: white !important;
-    position: absolute;
-    bottom: -1%;
-    right: -1%;
-    outline: none;
-    border: none !important;
-    border-top-left-radius: 100%;
-  }
-  .curve-box-2 {
-    content: "";
-    height: 50px;
-    width: 50px;
-    background-color: white !important;
-    position: absolute;
-    bottom: -1%;
-    left: -1%;
-    outline: none;
-    border: none !important;
-    border-top-right-radius: 100%;
-  }
-  .curve-box-3 {
-    content: "";
-    height: 50px;
-    width: 50px;
-    background-color: white !important;
-    position: absolute;
-    top: -1%;
-    right: -1%;
-    outline: none;
-    border: none !important;
-    border-bottom-left-radius: 100%;
-  }
-  .curve-box-4 {
-    content: "";
-    height: 50px;
-    width: 50px;
-    background-color: white !important;
-    position: absolute;
-    top: -1%;
-    left: -1%;
-    outline: none;
-    border: none !important;
-    border-bottom-right-radius: 100%;
-  }
-
-    .curved-div {
-      border: none !important;
-    }
-  
-    .aim {
-      width: fit-content;
-      /* padding: 100px 30px !important; */
-    }
-    li {
-      list-style: none !important;
-    }
-    .font {
-      font-family: 'Poppins', sans-serif !important;
-    }
-
-</style>
 <body>
-     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="./images/demo-logo.png"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="bi bi-list text-white fs-1"></i>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-underline pt-5 pt-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about-us.html ">ABOUT US</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="testimonials.html" >TESTIMONIALS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact-us.html" >CONTACT</a>
-                  </li>
-                  <li>
-                    <button onclick="myFunction()" class="theme btn py-0">
-                        <i class="fa-regular fa-moon text-white fs-4 pt-2"></i>
-                    </button>
-                  </li>
-                </ul> 
-              </div>
+    <main>
+
+        <div class="main-background">
+            <div class="blue-frame">
+                <div class="frame-1"><img src="./assets/img/Frame 1404.png" alt="Frame 1"></div>
+                <div class="frame-2"><img src="./assets/img/Frame 1405.png" alt="Frame 2"></div>
+
             </div>
-          </nav>
-    </header>
+            <div class="container">
+                <div class="general">
 
-    <!-- hero-page -->
+                    <div class="d-flex justify-content-center align-items-center left ">
 
-    <section id="banner" class="text-white pt-5">
-            <div class="container banner-cont py-2 mt-2 mt-sm-2 py-lg-4">
-                <div class="row">
-                  <div class="col-md-6" data-aos="fade-up"  data-aos-duration="2000">
-                    <p class="hero-txt">BEST DIGITAL AGENCY</p>
-                    <p>Subscribe JG Codes Tutorials Youtube Channel to watch more videos on website development, Digital Marketing, Wordpress and Graphics Designing</p>
-                    <a href="form.html"><img src="./images/play.png" alt="" width="40px" class="play-btn"> Watch Tutorials</a>
-                  </div>
-                  <div class="col-md-6 text-center" data-aos="fade-down"  data-aos-duration="3000">
-                    <img src="./images/home2.png" alt="" class="img-fluid">
-                  </div>
-                </div>
-            </div>
+                        <div class="logo"><img src="./assets/img/Group 87.png" alt="Logo"></div>
+                        <div class="car-img"><img src="/assets/img/Rectangle 41.png" alt="Car Image"></div>
+                        <p class="text-center">Rent a car for your travels whenever you want from the comfort of your home</p>
+                    </div>
+                    <div class="right">
 
-        <div class="div">
-            <img src="./images/wave1.png" alt="" width="100%" >
-        </div>
-    </section>
-    <!-- about us -->
-  
-    
-      <section class="mt-4 py-5">
-          <div class="container py-4">
-            <div class="row">
-              <div class="col-lg-6" style="font-family: 'Poppins', sans-serif; ">
-                    <h2><strong class="display-5" style="font-weight: 600;">Services</strong> we can help you with ! </h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam magni deserunt enim! Minima corporis ea, quaerat voluptatibus fugiat distinctio accusamus nobis aliquam perferendis unde velit dolorem aspernatur autem eum praesentium.</p>
-                <ul  style="list-style: none;" class="p-0">
-                  <li >Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-                  <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-                </ul>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div class="owners text-center">
+                                    <a href="./owners-login.html">Owner</a>
+                                </div>
+                                <div class="users text-center">
+                                    <a href="./users-login.html">Users</a>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <h4 class="text-center">Login</h4>
+                                <div class="form-body">
+                                    <form action="" id="login-form">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <div class="input-box">
+                                            <input type="email" class="form-control" placeholder="Email Address" id="email" aria-describedby="emailHelp">
+                                        </div>
 
-                <div >
-                    <div class="direct ">
-                      <div class="direct-img">
-                        <img src="./images/testimonial-1.png" alt="" width="10%">
-                      </div>
-                      <div class="div-txt">
-                        <p class="m-auto fw-bold txt-color">CEO, Director</p>
-                      </div>
+                                        <label for="password" class="form-label mt-3">Password</label>
+                                        <div class="input-box">
+                                            <input type="password" class="form-control" placeholder="Enter your password" id="password">
+                                        </div>
+                                        <div class="forgot-password mt-3">
+                                            <a href="">Forgot Password</a>
+                                        </div>
+
+                                        <div class="d-flex justify-content-center mt-3">
+                                            <button type="submit" onclick="submitLogin()" class="btn btn-primary px-5 py-2">Log in</button>
+                                        </div>
+                                        <div class="btn-cover">
+                                            <div class="lines">
+                                                <div class="line1"></div>
+                                                <p>Or login with</p>
+                                                <div class="line1"></div>
+                                            </div>
+                                            <div class="icons">
+                                                <div class="icon"><img src="./assets/img/Frame 1408.png" alt="Icon 1"></div>
+                                                <div class="icon"><img src="./assets/img/Frame 1409.png" alt="Icon 2"></div>
+                                            </div>
+                                            <p class="mt-3">Don’t have an Account? Signup</p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="container text-center">
-                  <div class="row">
-                    <div class="col-lg-6 mb-4 ">
-                      <div class="card curved-div   text-white py-3" style="font-family: 'Poppins', sans-serif; background-color: #00A1F1 ;" >
-                        <i class="bi bi-code-slash fs-1 display-1"></i>
-                        <div class="card-body">
-                          <h5 class="card-title fw-bold" style="font-family: 'Poppins', sans-serif;" >WEBSITE</h5>
-                          <p class="card-text p-0 fw-bold" style="font-family: 'Poppins', sans-serif;">DEVELOPMENT</p>
-                        </div>
-                        <div class="curve-box-1"></div>
-                      </div>
-                    </div>
-                    
-                    <div class="col-lg-6 mb-4">
-                      <div class="card curved-div text-white py-3" style="font-family: 'Poppins', sans-serif; background-color: #7CBB00;" >
-                        <i class="bi bi-bezier fs-1 display-1"></i>
-                        <div class="card-body">
-                          <h5 class="card-title ">Website</h5>
-                          <p class="card-text p-0">Development</p>
-                        </div>
-                        <div class="curve-box-2"></div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6 mb-4">
-                      <div class="card curved-div   text-white py-3" style="font-family: 'Poppins', sans-serif; background-color: #FFB900;" >
-                        <i class="bi bi bi-body-text fs-1 display-1"></i>
-                        <div class="card-body">
-                          <h5 class="card-title ">Website</h5>
-                          <p class="card-text p-0">Development</p>
-                        </div>
-                        <div class="curve-box-3"></div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6 mb-4">
-                      <div class="card curved-div  text-white py-3" style="font-family: 'Poppins', sans-serif; background-color: #FF3B30;" >
-                        <i class="bi bi-sliders fs-1 display-1"></i>
-                        <div class="card-body">
-                          <h5 class="card-title ">Website</h5>
-                          <p class="card-text p-0">Development</p>
-                        </div>
-                        <div class="curve-box-4"></div>
-                      </div>
-                    </div>
-                   
-                  </div>
-                </div>
-              </div>
-            </div>
-            
 
+            </div>
         </div>
-      </section>
+        </div>
 
 
-      <!-- blog -->
-      <section class="color " >
-        <div class="container mt-4 py-5 ">
-          <div class="row">
-            <div class="col-lg-6 ">
-              <div class="aim py-5 px-5">
-                <p style="font-family: 'Poppins', sans-serif;" class="text-white fw-bold fs-1 display-1" ><span>Mission</span> We <br/>
-                  Aim For You!</p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="progress mb-2" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 25%;">
-                <div class="progress-bar bg-info text-dark" style="width: 85%">85%</div>
-              </div>
-              <div class="progress mb-2" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 25%;">
-                <div class="progress-bar bg-warning text-dark" style="width: 95%">95%</div>
-              </div>
-              <div class="progress mb-2" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 25%;">
-                <div class="progress-bar bg-danger" style="width: 92%">92%</div>
-              </div>
-              <ul class="d-flex text-center">
-                <li class="px-3 bg-info " style="font-family: 'Poppins', sans-serif;">MARKETING</li>
-                <li class="px-3 bg-warning " style="font-family: 'Poppins', sans-serif;">SOLUTION</li>
-                <li class="px-3 bg-danger " style="font-family: 'Poppins', sans-serif;">SERVICES</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    
-      <!-- Testimonials Section -->
-      <!-- <section class="testimonials">
-       <div class="container">
-        <h2 class="fs-1 data-aos="fade-down"  data-aos-duration="3000"">TESTIMONIALS</h2>
-        <p data-aos="fade-down"  data-aos-duration="1000"> 
-            "I can't say enough about the exceptional services provided by [Your Digital Agency]. From the moment we started working with them, it was clear we were in capable hands. Their attention to detail, creativity, and dedication to understanding our unique needs were truly remarkable.
-            
-            The team at [Your Digital Agency] demonstrated an impressive ability to transform our vision into an interactive, visually stunning website that perfectly represents our brand. The level of communication and collaboration throughout the project was outstanding, and they were always responsive to our ideas and concerns.
-            
-            Not only did they deliver a website that exceeded our expectations, but they also offered valuable insights and suggestions to enhance user experience and optimize site performance. The end result speaks for itself - a website that not only looks amazing but functions seamlessly across devices.
-            
-            We've received numerous compliments from our clients about the new website's design and usability. It has undoubtedly played a significant role in enhancing our online presence and attracting more business.
-            
-            We highly recommend [Your Digital Agency] to anyone seeking professional digital solutions. They are a team of dedicated professionals who are passionate about what they do and are committed to delivering excellence. We look forward to continuing our partnership with them on future projects."
-            
-            — GOSPEL AKAMA OBASESAM, CEO, JG Codes Company
-        </p>
-          <textarea name="" id="" cols="" rows="10" placeholder="Customer testimonial goes here." class="mt-5 p-3 w-100" ></textarea>
-          <p class="customer-name">- John Doe</p>
-        Add more testimonials as needed
-      </section> -->
+    </main>
 
-<!-- portfolio -->
-    <section class="my-5 py-4">
-      <div class="container">
-        <div class="titile">
-          <h1 class="txt-color font fw-4 text-center">ACTIVITIES WE COMPLETED</h1>
-          <p class="txt-color font text-center" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque et eum architecto, ipsum odit nobis sit nulla, totam eius libero culpa nesciunt dolor consequatur aspernatur! Veniam in ullam ratione quas?</p>
-        </div>
-          <div class="row my-4 py-5 testimony">
-            <div class="col-lg-4">
-              <div class="card curved-div mb-4 ">
-                <img src="./images/port-1.jpg" class="card-img-top " alt="...">
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card curved-div ">
-                <img src="./images/port-2.jpg" class="card-img-top" alt="...">
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card curved-div ">
-                <img src="./images/port-8.jpg" class="card-img-top" alt="...">
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card curved-div mb-4 ">
-                <img src="./images/port-4.jpg" class="card-img-top " alt="...">
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card curved-div ">
-                <img src="./images/port-5.jpg" class="card-img-top " alt="...">
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card curved-div ">
-                <img src="./images/port-6.png" class="card-img-top" alt="...">
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card curved-div ">
-                <img src="./images/port-7.jpg" class="card-img-top" alt="...">
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card curved-div ">
-                <img src="./images/port-8.jpg" class="card-img-top" alt="...">
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card curved-div ">
-                <img src="./images/port-2.jpg" class="card-img-top" alt="...">
-              </div>
-            </div>
-          </div>
-      </div>
-    </section>
-    
-      <!-- CTA Buttons -->
-      
-       
-    
-      <!-- Footer -->
-      <footer class="mt-5 text-white text-center p-4">
-        <div class="footer-content ">
-          <p>&copy; 2023 Digital Agency | Contact: info@example.com</p>
-          <div class="social-media-icons">
-            <a href="#"><i class="bi bi-facebook text-white"></i></a>
-            <a href="#"><i class="bi bi-instagram text-white"></i></a>
-            <a href="#"><i class="bi bi-twitter text-white"></i></a>
-            <a href="#"><i class="bi bi-linkedin text-white"></i></a>
-            <a href="#"><i class="bi bi-whatsapp text-white"></i></a>
-            
-          </div>
-        </div>
-      </footer> 
-    
-    <script src="https://kit.fontawesome.com/9411a1fc57.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>    
+    <!-- Bootstrap Script (including jQuery) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+
+    <!-- Font Awesome script -->
+    <script src="https://kit.fontawesome.com/71668c805d.js" crossorigin="anonymous"></script>
+
+    <!-- Boxicons script  -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script
+
+
+    <!-- AOS script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-      </script>
-  
+    </script>
+
+    <!-- javaScipt link -->
+    <script src="./js/app.js"></script>
+
 </body>
+
 </html>
