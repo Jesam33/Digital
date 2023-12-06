@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google fonts cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- main styling -->
+    <link rel="stylesheet" href="./css/stlye.css" />
+
+    <!-- font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Boxicons CSS  -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- subsidiary styling -->
+    <link rel="stylesheet" href="./css/subsidiary.css" />
+
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="./css/settings_verify.css" />
+    <link rel="stylesheet" href="./css/settings_profile.css">
+
+    <title>RIDEREADY</title>
+
+    <!-- AOS link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <div
+        id="bdSidebar"
+        class="sidecard d-flex flex-column mt flex-shrink-1 text-white offcanvas-md offcanvas-start"
+      >
+        <img
+          src="./assets/img/Ride-ready1.png"
+          alt=""
+          style="padding: 20px; width: 80%; margin-left: 15px"
+        />
+        <ul
+          class="mynav nav nav-pills flex-column mb-auto ms-4 mt-5 pt-5 gap-1"
+        >
+          <li class="nav-item mb-1 fs-6">
+            <a href="./settings_profile.html" class="active">
+              <img
+                src="./assets/img/verify/user-edit.png"
+                alt=""
+                style="margin: 3px; width: 15px; padding-bottom: 4px"
+              />
+              Account Setting
+            </a>
+          </li>
+
+          <li class="nav-item mb-1">
+            <a href="./terms-cond.html">
+              <img
+                src="./assets/img/verify/Vector-3.png"
+                alt=""
+                style="margin: 3px; width: 13px; padding-bottom: 4px"
+              />
+              Terms and Condition
+            </a>
+          </li>
+          <li class="nav-item mb-1">
+            <a href="./language-opt.html">
+              <img
+                src="./assets/img/verify/Vector-1.png"
+                alt=""
+                style="margin: 3px; width: 15px; padding-bottom: 4px"
+              />
+              Language Option
+            </a>
+          </li>
+          <li class="nav-item mb-1">
+            <a href="./privacy-data.html">
+              <img
+                src="./assets/img/verify/Vector-2.png"
+                alt=""
+                style="margin: 3px; width: 12px; padding-bottom: 4px"
+              />
+              Privacy and Data
+            </a>
+          </li>
+        </ul>
+        <div class="d-flex my-5 px-4">
+          <button class="btn-border">
+            <a href="#" class="sidebar-link text-decoration-none text-white">
+              <div class="gap-1 d-flex">
+                <div>
+                  <i class="bx bxs-log-out fs-4"></i>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                  <a href="./users-login.html" class="text-decoration-none text-white"><p class="mb-0 fs-8 pb-0">Log Out</p></a>
+                </div>
+              </div>
+            </a>
+          </button>
+        </div>
+      </div>
+      <div class="w-100 d-flex justify-content-end" style="height: 100vh">
+        <div class="wid d-flex align-items-start">
+          <div class="p-2 d-md-none d-flex text-white">
+            <a
+              href="#"
+              class="text-white"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#bdSidebar"
+            >
+              <i class="fa-solid fa-bars nav-icon position-absolute ps"></i>
+            </a>
+          </div>
+          <nav class="d-none d-lg-flex d-md-flex d-flex justify-content-end gap-5 align-items-center py-4 ps-3 position-fixed w-75 " >
+            <div class="back-nav ">
+               <a href="./users-dashboard.html">
+                   <svg width="90" height="30" viewBox="0 0 84 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M1.84295 10.2609L0.921473 11.2224L0 10.2609L0.921473 9.29948L1.84295 10.2609ZM24 21.1401C24 21.5008 23.8627 21.8467 23.6183 22.1017C23.3738 22.3567 23.0423 22.5 22.6966 22.5C22.351 22.5 22.0195 22.3567 21.775 22.1017C21.5306 21.8467 21.3933 21.5008 21.3933 21.1401H24ZM7.43825 18.0219L0.921473 11.2224L2.76442 9.29948L9.2812 16.099L7.43825 18.0219ZM0.921473 9.29948L7.43825 2.5L9.2812 4.42289L2.76442 11.2224L0.921473 9.29948ZM1.84295 8.90103H14.8765V11.6208H1.84295V8.90103ZM24 18.4203V21.1401H21.3933V18.4203H24ZM14.8765 8.90103C17.2962 8.90103 19.6168 9.90395 21.3278 11.6892C23.0388 13.4744 24 15.8956 24 18.4203H21.3933C21.3933 16.617 20.7067 14.8875 19.4846 13.6123C18.2624 12.3372 16.6049 11.6208 14.8765 11.6208V8.90103Z" fill="white"/>
+                       <path d="M33.88 19.5V5.5H40.44C42.12 5.5 43.4 5.83333 44.28 6.5C45.16 7.15333 45.6 8.03333 45.6 9.14C45.6 9.88667 45.4267 10.5267 45.08 11.06C44.7333 11.58 44.2667 11.9867 43.68 12.28C43.1067 12.56 42.48 12.7 41.8 12.7L42.16 11.98C42.9467 11.98 43.6533 12.1267 44.28 12.42C44.9067 12.7 45.4 13.1133 45.76 13.66C46.1333 14.2067 46.32 14.8867 46.32 15.7C46.32 16.9 45.86 17.8333 44.94 18.5C44.02 19.1667 42.6533 19.5 40.84 19.5H33.88ZM36.48 17.46H40.68C41.6533 17.46 42.4 17.3 42.92 16.98C43.44 16.66 43.7 16.1467 43.7 15.44C43.7 14.7467 43.44 14.24 42.92 13.92C42.4 13.5867 41.6533 13.42 40.68 13.42H36.28V11.4H40.16C41.0667 11.4 41.76 11.24 42.24 10.92C42.7333 10.6 42.98 10.12 42.98 9.48C42.98 8.82667 42.7333 8.34 42.24 8.02C41.76 7.7 41.0667 7.54 40.16 7.54H36.48V17.46ZM55.4348 19.5V17.34L55.2948 16.88V13.1C55.2948 12.3667 55.0748 11.8 54.6348 11.4C54.1948 10.9867 53.5282 10.78 52.6348 10.78C52.0348 10.78 51.4415 10.8733 50.8548 11.06C50.2815 11.2467 49.7948 11.5067 49.3948 11.84L48.4148 10.02C48.9882 9.58 49.6682 9.25333 50.4548 9.04C51.2548 8.81333 52.0815 8.7 52.9348 8.7C54.4815 8.7 55.6748 9.07333 56.5148 9.82C57.3682 10.5533 57.7948 11.6933 57.7948 13.24V19.5H55.4348ZM52.0748 19.64C51.2748 19.64 50.5748 19.5067 49.9748 19.24C49.3748 18.96 48.9082 18.58 48.5748 18.1C48.2548 17.6067 48.0948 17.0533 48.0948 16.44C48.0948 15.84 48.2348 15.3 48.5148 14.82C48.8082 14.34 49.2815 13.96 49.9348 13.68C50.5882 13.4 51.4548 13.26 52.5348 13.26H55.6348V14.92H52.7148C51.8615 14.92 51.2882 15.06 50.9948 15.34C50.7015 15.6067 50.5548 15.94 50.5548 16.34C50.5548 16.7933 50.7348 17.1533 51.0948 17.42C51.4548 17.6867 51.9548 17.82 52.5948 17.82C53.2082 17.82 53.7548 17.68 54.2348 17.4C54.7282 17.12 55.0815 16.7067 55.2948 16.16L55.7148 17.66C55.4748 18.2867 55.0415 18.7733 54.4148 19.12C53.8015 19.4667 53.0215 19.64 52.0748 19.64ZM65.9228 19.64C64.8028 19.64 63.8028 19.4067 62.9228 18.94C62.0561 18.46 61.3761 17.8067 60.8828 16.98C60.3895 16.1533 60.1428 15.2133 60.1428 14.16C60.1428 13.0933 60.3895 12.1533 60.8828 11.34C61.3761 10.5133 62.0561 9.86667 62.9228 9.4C63.8028 8.93333 64.8028 8.7 65.9228 8.7C66.9628 8.7 67.8761 8.91333 68.6628 9.34C69.4628 9.75333 70.0695 10.3667 70.4828 11.18L68.5628 12.3C68.2428 11.7933 67.8495 11.42 67.3828 11.18C66.9295 10.94 66.4361 10.82 65.9028 10.82C65.2895 10.82 64.7361 10.9533 64.2428 11.22C63.7495 11.4867 63.3628 11.8733 63.0828 12.38C62.8028 12.8733 62.6628 13.4667 62.6628 14.16C62.6628 14.8533 62.8028 15.4533 63.0828 15.96C63.3628 16.4533 63.7495 16.8333 64.2428 17.1C64.7361 17.3667 65.2895 17.5 65.9028 17.5C66.4361 17.5 66.9295 17.38 67.3828 17.14C67.8495 16.9 68.2428 16.5267 68.5628 16.02L70.4828 17.14C70.0695 17.94 69.4628 18.56 68.6628 19C67.8761 19.4267 66.9628 19.64 65.9228 19.64ZM74.5863 17.12L74.6463 13.98L80.2263 8.82H83.2263L78.4863 13.58L77.1663 14.68L74.5863 17.12ZM72.5463 19.5V4.66H75.0463V19.5H72.5463ZM80.6063 19.5L76.7063 14.68L78.2863 12.68L83.6463 19.5H80.6063Z" fill="white"/>
+                   </svg> 
+               </a>  
+             </div>
+             <div class="d-flex search-bar align-items-center rounded-pill ">
+               <input type="text" class="w-100 search-input py-3 px-2 text-white" placeholder="Search here" />
+               <i class="bi bi-search text-white fs-3 pe-4"></i>
+             </div>
+             <div class="d-flex gap-nav justify-content-between align-items-center">
+               <div class="p-1 rounded-circle bell">
+                   <i class='bx bxs-bell fs-3 text-white '></i>
+              </div>
+               <div class="rounded-circle bell">
+                   <img src="./assets/img/car-details-img/dp.png" alt="" class="img-fluid" >
+              </div> 
+             </div>
+          </nav>
+          <main class="pt-5 px-sm-4" style="height: 100vh">
+            <div class="mt-5 container pt-4">
+              <h1 class="text-white my-lg-4 fs-5 px-3  mb-3 ">
+                Account Settings
+              </h1>
+              <div class="foundation-col rounded-4">
+                <div class="container hero-page foundation-col"
+                data-aos="fade-right"
+                  data-aos-offset="200"
+                  data-aos-easing="ease-in-sine">
+                 
+                    <div class="container display_block">
+                      <div class="heading">
+                        <ul class="full_width row ">
+                         <div class="profile col-md-6">
+                          <li class="">
+                              <a
+                                data-toggle="pill"
+                                class="text-decoration-none text-white text_center"
+                                href="./settings_profile.html"
+                                >Profile</a
+                              >
+                            </li>
+                         </div>
+                         <div class="verification col-md-6">
+                          <li class=" active">
+                              <a
+                                data-toggle="pill"
+                                class="text-decoration-none text-white text_center"
+                                href="./settings_verify.html"
+                                >Verification</a
+                              >
+                            </li>
+                         </div>
+                        </ul>
+                      </div>
+                      
+                      <div class="form-section text-white ps-5">
+                          <form action="">
+                              <div class="form-row">
+                                 
+                                  <div class="form-group mt-5 col-md-7">
+                                    <label for="id-card" class="mb-2 fs-8">Means of Identification</label>
+                                    <select id="id-card" class="form-control  py-3 mb-4">
+                                      <option value="1" selected>Select Id type</option>
+                                      <option value="2">International Passport</option>
+                                      <option value="3">Driver's License</option>
+                                      <option value="4">Voter's Card</option>
+                                      <option value="5">NIN</option>
+  
+  
+  
+                                    </select>
+                                  </div>
+                              <div class="form-row">
+                                  <div class="form-group id-num col-md-7">
+                                      <label class="mb-2 fs-8" for="id-number"
+                                        >ID Number</label
+                                      >
+                                      <input
+                                        type="password"
+                                        class="form-control py-3 mb-4"
+                                        id="id-number"
+                                        placeholder="***********"
+                                                                         
+                                      />
+                                      <i class="bi bi-eye-slash"></i>
+                                    </div>
+  
+                              </div>
+                              <div class="row">
+                                  <div class="form-group  col-md-5">
+                                      <label class="mb-2 fs-8" for="upload">Upload Means of Identification</label>
+                                      <div class="upload-file text-center ">
+                                      <a href="#"><img src="./assets/img/verify/solar_upload-bold.png" alt=""></a>
+  
+                                      </div>                             
+                                      <p class="mt-2">JPG, JPEG, PNG (Max file size 3MB)</p>
+                                    </div>
+                              </div>
+                             
+                              <div class="button-wrapper d-flex mt-3">
+                                  <div class="save-chng text-center mb-3 me-4 mb-5 active">
+                                      <a href="./users-dashboard.html" class="button">Save Changes</a>
+                                    </div>
+                                    <div class="cancel text-center mb-3">
+                                      <a href="./settings_profile.html" class="button">Cancel</a>
+                                    </div>
+                            </div>                       
+  
+                              
+                              
+                          </form>
+                      </div>
+                      
+                      
+                      </div>
+                </div>
+              </div>
+                <!-- </div> -->
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Script (including jQuery) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- font awesome script -->
+    <script
+      src="https://kit.fontawesome.com/71668c805d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Boxicons script  -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!-- AOS script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- javaScipt link -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>

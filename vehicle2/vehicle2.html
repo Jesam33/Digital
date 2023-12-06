@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google fonts cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- main styling -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Boxicons CSS  -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- subsidiary styling -->
+    <link rel="stylesheet" href="./css/subsidiary.css" />
+
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="./css/payment.css" />
+
+    <title>RIDEREADY</title>
+
+    <!-- AOS link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <div
+        id="bdSidebar"
+        class="sidecard d-flex flex-column mt flex-shrink-1 text-white offcanvas-md offcanvas-start"
+      >
+        <img
+          src="./img/Group 87.png"
+          alt=""
+          style="padding: 20px; width: 70%; margin-left: 15px"
+        />
+        <ul class="mynav nav nav-pills flex-column mb-auto ms-4 pt-5 gap-1">
+          <li class="nav-item mb-1 fs-6">
+            <a href="#">
+              <img
+                src="./img/dashboard-icon.png"
+                alt=""
+                style="margin: 3px; width: 10px"
+              />
+              Dashboard
+            </a>
+          </li>
+
+          <li class="nav-item mb-1">
+            <a href="#">
+              <img
+                src="./img/vehicle-icon.png"
+                alt=""
+                style="margin: 3px; width: 11px"
+              />
+              Vehicle
+            </a>
+          </li>
+          <li class="nav-item mb-1">
+            <a href="#">
+              <img
+                src="./img/booking-icon.png"
+                alt=""
+                style="margin: 3px; width: 9px"
+              />
+            Bookings
+            </a>
+          </li>
+          <li class="nav-item mb-1">
+            <a href="#" class="number">
+              <div class="numberCircle">7</div>
+              <img
+                class=""
+                src="./assets/img/mail-unread-fill.png"
+                alt=""
+                style="margin: 3px; width: 12px"
+              />
+              <i class="bx bxs-envelope"></i>
+              Inbox
+            </a>
+          </li>
+
+          <li class="sidebar-item nav-item mb-1">
+            <a
+              href="#"
+              class="sidebar-link collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#settings"
+              aria-expanded="false"
+              aria-controls="settings"
+            >
+              <img
+                src="./img/settings.png"
+                alt=""
+                style="margin-left: 1px; width: 12px"
+              />
+              <span class="topic">Settings </span>
+            </a>
+          </li>
+        </ul>
+
+        <button type="button" class="btn btn-outline-light mx-5"><span><img src="./img/logout.png" alt=""></span> Logout</button>
+
+      </div>
+
+      <div class="w-100 d-flex justify-content-end" style="height: 100vh">
+        <div class="wid d-flex align-items-start">
+          <div class="p-2 d-md-none d-flex text-white">
+            <a
+              href="#"
+              class="text-white"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#bdSidebar"
+            >
+              <i class="fa-solid fa-bars nav-icon position-absolute ps"></i>
+            </a>            
+        </div>
+
+          
+          <nav
+            class="d-flex justify-content-center align-items-center py-3 px-3 position-fixed w-100 wid-sm pe-md-5"
+          >
+            <div class="d-flex search-bar align-items-center">
+              <input type="text" class="w-100 search-input" />
+              <i class="bi bi-search text-secondary"></i>
+            </div>
+            <div class="d-flex">
+              <img
+                src="./img/notification.png"
+                alt=""
+                style="
+                  width: 20px;
+                  height: 20px;
+                  margin-left: 50px;
+                  margin-top: 10px;
+                "
+              />
+              <img
+                src="./img/profile.png"
+                alt=""
+                style="width: 35px; height: 35px; margin-left: 50px"
+              />
+            </div>            
+          </nav>
+
+          <main class="pt-5 px-sm-" style="height: 100vh">
+            <div class="mt-4">
+
+                <div class=" text-white py-4">
+                    <div class="container card-inner-flex justify-content-end px-4">
+                        <div class="d-flex bd1 d-flex justify-content-center align-items-center mx-1 px-2" style="background-color: #151A48;">
+                        <img src="./img/filter.png" width="15px" height="15px"  alt="">
+                        <p class="px-2 m-0 text-center">Filter</p>
+                        </div>
+                        <div class="d-flex pri-bg-col bd1 px-1 d-flex justify-content-center align-items-center mx-1 px-2 py-2" style="background-color: #151A48;">
+                        <img src="./img/add.png" width="15px" height="15px" alt="" class="m-0 ">
+                        <p class="px-2 text-center m-0 ">Add Car</p>
+                        </div>
+                    </div>
+                </div>
+                
+              <div class="card-group mx-3 py-3 text-white" >
+                        <div class="card mx-3" style="background-color: #151A48;"> 
+                            <div class="mx-2 my-2 rounded-4" style="background-color: #3B4ACF;">
+                            <div class="card-inner-flex p-2 mb">
+                                <p class=" px-2 m-0 rounded-4" style="background-color:#253af9;">2023</p>
+                                <img src="./img/love.png" alt="" height="12px" class="m-0 px-3">
+                            </div>
+                            <img src="./img/new image 2.png" class="card-img-top" alt="...">
+                            </div>
+                          <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5 class="card-title">Urus</h5>
+                                </div>
+                                <div class="">
+                                    <img src="./img/Group 1494.png" alt="">
+                                </div>
+                           </div>
+                          </div>
+                          <p class="container-fluid m-0 tex-18 py-2">Audi Sport</p>
+                          <div class="container-fluid card-icon-flex gap-2">
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <div><img src="./img/Group.png" alt=""></div>
+                                <p class="text-center m-0 tex-14" >suv</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <div><img src="./img/Vector.png" alt=""></div>
+                                <p class="m-0 text-center tex-14">4</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <img src="./img/mdi_car-seat.png" alt="">
+                                <p class="m-0 text-center tex-14">5</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <img src="./img/fluent_luggage-16-filled.png" alt="">
+                                <p class="m-0 text-center tex-14">2</p>
+                            </div>
+                        </div>
+                        <div class="container-fluid card-inner-flex py-3">
+                            <a href="#" class="btn text-white d-flex justify-content-between text-white align-items-center rounded-4" style="background-color:#3B4ACF;">Modify </a>
+                            <p class="fs-5">N5000/<span class="fw-small">DAY</span></p>
+                        </div>
+                        </div>
+
+                        <div class="card mx-3" style="background-color: #151A48;"> 
+                            <div class="mx-2 my-2 rounded-4" style="background-color: #3B4ACF;">
+                            <div class="card-inner-flex p-2 mb">
+                                <p class=" px-2 m-0 rounded-4" style="background-color: #253af9;">2023</p>
+                                <img src="./img/love.png" alt="" height="12px" class="m-0 px-3">
+                            </div>
+                            <img src="./img/innova.png" class="card-img-top" alt="...">
+                            </div>
+                          <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5 class="card-title">Urus</h5>
+                                </div>
+                                <div class="">
+                                    <img src="./img/Group 1494.png" alt="">
+                                </div>
+                           </div>
+                          </div>
+                          <p class="container-fluid m-0 tex-18 py-2">Innova</p>
+                          <div class="container-fluid card-icon-flex gap-2">
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <div><img src="./img/Group.png" alt=""></div>
+                                <p class="text-center m-0 tex-14" >suv</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <div><img src="./img/Vector.png" alt=""></div>
+                                <p class="m-0 text-center tex-14">4</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <img src="./img/mdi_car-seat.png" alt="">
+                                <p class="m-0 text-center tex-14">5</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <img src="./img/fluent_luggage-16-filled.png" alt="">
+                                <p class="m-0 text-center tex-14">2</p>
+                            </div>
+                        </div>
+                        <div class="container-fluid card-inner-flex py-3">
+                            <a href="#" class="btn text-white d-flex justify-content-between text-white align-items-center rounded-4" style="background-color:#3B4ACF;">Modify </a>
+                            <p class="fs-5">N5000/<span class="fw-small">DAY</span></p>
+                        </div>
+                        </div>
+
+                        <div class="card mx-3" style="background-color: #151A48;"> 
+                            <div class="mx-2 my-2 rounded-4" style="background-color: #3B4ACF;">
+                            <div class="card-inner-flex p-2 mb">
+                                <p class=" px-2 m-0 rounded-4" style="background-color: #253af9;">2023</p>
+                                <img src="./img/love.png" alt="" height="12px" class="m-0 px-3">
+                            </div>
+                            <img src="./img/dzire.png" class="card-img-top" alt="...">
+                            </div>
+                          <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5 class="card-title">Urus</h5>
+                                </div>
+                                <div class="">
+                                    <img src="./img/Group 1494.png" alt="">
+                                </div>
+                           </div>
+                          </div>
+                          <p class="container-fluid m-0 tex-18 py-2">Drize</p>
+                          <div class="container-fluid card-icon-flex gap-2">
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <div><img src="./img/Group.png" alt=""></div>
+                                <p class="text-center m-0 tex-14" >suv</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <div><img src="./img/Vector.png" alt=""></div>
+                                <p class="m-0 text-center tex-14">4</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <img src="./img/mdi_car-seat.png" alt="">
+                                <p class="m-0 text-center tex-14">5</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <img src="./img/fluent_luggage-16-filled.png" alt="">
+                                <p class="m-0 text-center tex-14">2</p>
+                            </div>
+                        </div>
+                        <div class="container-fluid card-inner-flex py-3">
+                            <a href="#" class="btn text-white d-flex justify-content-between text-white align-items-center rounded-4" style="background-color:#3B4ACF;">Modify </a>
+                            <p class="fs-5">N5000/<span class="fw-small">DAY</span></p>
+                        </div>
+                        </div>
+                      </div>
+
+                      <div class="card-group mx-3 text-white" >
+                        <div class="card mx-3" style="background-color: #151A48;"> 
+                            <div class="mx-2 my-2 py-4 rounded-4" style="background-color: #3B4ACF;">
+                            <div class="card-inner-flex p-2 mb">
+                                <p class=" px-2 m-0 rounded-4" style="background-color: #253af9;">2023</p>
+                                <img src="./img/love.png" alt="" height="12px" class="m-0 px-3">
+                            </div>
+                            <img src="./img/corolla.png" class="card-img-top" alt="...">
+                            </div>
+                          <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5 class="card-title">Urus</h5>
+                                </div>
+                                <div class="">
+                                    <img src="./img/Group 1494.png" alt="">
+                                </div>
+                           </div>
+                          </div>
+                          <p class="container-fluid m-0 tex-18 py-2">Corolla</p>
+                          <div class="container-fluid card-icon-flex gap-2">
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <div><img src="./img/Group.png" alt=""></div>
+                                <p class="text-center m-0 tex-14" >suv</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <div><img src="./img/Vector.png" alt=""></div>
+                                <p class="m-0 text-center tex-14">4</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <img src="./img/mdi_car-seat.png" alt="">
+                                <p class="m-0 text-center tex-14">5</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <img src="./img/fluent_luggage-16-filled.png" alt="">
+                                <p class="m-0 text-center tex-14">2</p>
+                            </div>
+                        </div>
+                        <div class="container-fluid card-inner-flex py-3">
+                            <a href="#" class="btn text-white d-flex justify-content-between text-white align-items-center rounded-4" style="background-color:#3B4ACF;">Modify </a>
+                            <p class="fs-5">N5000/<span class="fw-small">DAY</span></p>
+                        </div>
+                        </div>
+                        <div class="card mx-3" style="background-color: #151A48;"> 
+                            <div class="mx-2 my-2 rounded-4" style="background-color: #3B4ACF;">
+                            <div class="card-inner-flex p-2 mb">
+                                <p class=" px-2 m-0 rounded-4" style="background-color: #253af9;">2023</p>
+                                <img src="./img/love.png" alt="" height="12px" class="m-0 px-3">
+                            </div>
+                            <img src="./img/ertiga.png" class="card-img-top" alt="...">
+                            </div>
+                          <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5 class="card-title">Urus</h5>
+                                </div>
+                                <div class="">
+                                    <img src="./img/Group 1494.png" alt="">
+                                </div>
+                           </div>
+                          </div>
+                          <p class="container-fluid m-0 tex-18 py-2">Ertiga</p>
+                          <div class="container-fluid card-icon-flex gap-2">
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <div><img src="./img/Group.png" alt=""></div>
+                                <p class="text-center m-0 tex-14" >suv</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <div><img src="./img/Vector.png" alt=""></div>
+                                <p class="m-0 text-center tex-14">4</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <img src="./img/mdi_car-seat.png" alt="">
+                                <p class="m-0 text-center tex-14">5</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <img src="./img/fluent_luggage-16-filled.png" alt="">
+                                <p class="m-0 text-center tex-14">2</p>
+                            </div>
+                        </div>
+                        <div class="container-fluid card-inner-flex py-3">
+                            <a href="#" class="btn text-white d-flex justify-content-between text-white align-items-center rounded-4" style="background-color:#3B4ACF;">Modify </a>
+                            <p class="fs-5">N5000/<span class="fw-small">DAY</span></p>
+                        </div>
+                        </div>
+                        <div class="card mx-3" style="background-color: #151A48;"> 
+                            <div class="mx-2 my-2 rounded-4" style="background-color: #3B4ACF;">
+                            <div class="card-inner-flex p-2 mb">
+                                <p class=" px-2 m-0 rounded-4" style="background-color: #253af9;">2023</p>
+                                <img src="./img/love.png" alt="" height="12px" class="m-0 px-3">
+                            </div>
+                            <img src="./img/volvo.png" class="card-img-top" alt="...">
+                            </div>
+                          <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h5 class="card-title">Urus</h5>
+                                </div>
+                                <div class="">
+                                    <img src="./img/Group 1494.png" alt="">
+                                </div>
+                           </div>
+                          </div>
+                          <p class="container-fluid m-0 tex-18 py-2">Volvo</p>
+                          <div class="container-fluid card-icon-flex gap-2">
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <div><img src="./img/Group.png" alt=""></div>
+                                <p class="text-center m-0 tex-14" >suv</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <div><img src="./img/Vector.png" alt=""></div>
+                                <p class="m-0 text-center tex-14">4</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <img src="./img/mdi_car-seat.png" alt="">
+                                <p class="m-0 text-center tex-14">5</p>
+                            </div>
+                            <div class="d-flex sec-bg-col justify-content-center align-items-center px-2 co bdr rounded-4" style="background-color: #3B4ACF;">
+                                <img src="./img/fluent_luggage-16-filled.png" alt="">
+                                <p class="m-0 text-center tex-14">2</p>
+                            </div>
+                        </div>
+                        <div class="container-fluid card-inner-flex py-3">
+                            <a href="#" class="btn text-white d-flex justify-content-between text-white align-items-center rounded-4" style="background-color:#3B4ACF;">Modify </a>
+                            <p class="fs-5">N5000/<span class="fw-small">DAY</span></p>
+                        </div>
+                        </div>
+                      </div>
+
+                      
+                      
+    
+    
+    
+            </div>
+
+            
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Script (including jQuery) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- font awesome script -->
+    <script
+      src="https://kit.fontawesome.com/71668c805d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Boxicons script  -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!-- AOS script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- javaScipt link -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>

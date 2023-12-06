@@ -1,0 +1,164 @@
+body {
+	background-color: #060d0d;
+  }
+  
+  .sidecard {
+	background-color: #3b4acf66 !important;
+	width: 15%;
+	height: 100vh;
+	border-radius: 15px;
+	margin-left: -1%;
+	position: fixed;
+  }
+  
+  .sidecard:hover {
+	background-color: #3b4acf66;
+  }
+  
+  .mynav {
+	border-radius: 25px;
+	margin-left: -1%;
+  }
+  
+  .mynav li a {
+	color: #fff;
+	text-decoration: none;
+	width: 100%;
+	display: block;
+	border-radius: 4px;
+	border-left: 50px;
+	padding: 8px 5px;
+  }
+  
+  .mynav li a.active {
+	background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .mynav li a:hover {
+	background-color: #3b4acf66;
+	width: 105%;
+	margin-left: -5%;
+	border-left: 40%;
+	border-left-color: #3b4acf66 !important;
+  }
+  
+  .mynav li a i {
+	width: 25px;
+	text-align: center;
+  }
+
+  .number {
+	position: relative;
+  }
+  
+  .numberCircle {
+	position: absolute;
+	top: 0;
+	right: 55%;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	background: #3b4acf;
+	color: #fff;
+	text-align: center;
+	font: 10px;
+  }
+  
+  .notification-badge {
+	background-color: #09111a !important;
+	float: right;
+	font-size: 14px;
+	padding: 0px 8px;
+	border-radius: 2px;
+  }
+  
+  .search-bar {
+	width: 60%;
+	background-color: #084387;
+	border-radius: 20px;
+	padding: 3px 10px;
+  }
+  
+  .search-input {
+	background-color: transparent;
+	width: 100%;
+	border: none;
+	color: white;
+  }
+  
+  .search-input:focus {
+	outline: none;
+  }
+  
+  main {
+	width: 100%;
+  }
+  
+  .nav-txt {
+	font-size: 11px;
+  }
+  
+  .wid {
+	width: 86%;
+	height: 100vh;
+  }
+  
+  .nav-icon {
+	z-index: 1000;
+  }
+  
+  .ps {
+	top: 20px;
+	font-size: 25px;
+  }
+
+  .btn {
+	margin-bottom: 80px;
+  }
+  
+  .card {
+	background-image: url(img/Group\ 1493.png);
+	background-repeat: no-repeat;
+	background-position: 100%;
+}
+.card-inner-flex{
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-icon-flex{
+	display: flex;
+}
+
+.floating-container {
+	/* height: 728px; */
+	width: 449px;
+	background-color:#151A48;
+	position: absolute;
+	top: 160px;
+	left: 700px;
+}
+
+.border-primary {
+	border-color: #3B4ACF !important;
+}
+
+.border-bottom {
+	border-color: #3B4ACF !important;
+}
+
+  @media screen and (min-width: 375px) and (max-width: 675px) {
+	.wid {
+	  width: 100%;
+	}
+  
+	.wid-sm {
+	  margin-left: 40px;
+	  width: 90% !important;
+	}
+  
+	.mt {
+	  margin-top: 55px;
+	}
+  }
+  

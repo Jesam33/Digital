@@ -1,0 +1,188 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+
+body {
+  background-color: #060d0d;
+  font-family: "Montserrat";
+}
+
+/* nav-side-bar */
+
+.sidecard {
+  background-color: #3b4acf66 !important;
+  width: 15%;
+  height: 100vh;
+  border-radius: 15px;
+  margin-left: -1%;
+  position: fixed;
+}
+
+.page-wrapper ul li a {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sidecard:hover {
+  background-color: #3b4acf66;
+}
+
+.foundation-col {
+  background-color: #151a48;
+}
+
+.mynav {
+  border-radius: 25px;
+  margin-left: -1%;
+}
+
+.mynav li a {
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  border-left: 50px;
+  padding: 8px 5px;
+}
+
+.mynav li a.active {
+  background: #202871;
+  width: 105%;
+  margin-left: -5%;
+}
+
+.mynav li a:hover {
+  background-color: #3b4acf66;
+  width: 105%;
+  margin-left: -5%;
+  border-left: 40%;
+  border-left-color: #3b4acf66 !important;
+}
+
+.mynav li a i {
+  width: 25px;
+  text-align: center;
+}
+
+.nav-txt {
+  font-size: 11px;
+}
+
+nav {
+  z-index: 1000;
+}
+
+.arrow-return a {
+  text-decoration: none;
+  color: #fff;
+}
+.search-bar {
+  width: 60%;
+  background-color: #1b255b;
+  border-radius: 20px;
+  padding: 3px 15px;
+}
+
+.search-input {
+  background-color: #1b255b;
+  width: 100%;
+  border: none;
+  color: white;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.btn-border {
+  border: 1px solid white;
+  background-color: #151a48;
+  padding: 10px 20px;
+  border-radius: 0.8em;
+}
+
+.btn-border:hover {
+  background-color: #084387;
+  width: 105%;
+  margin-right: 10%;
+  margin-right: 5%;
+}
+
+/* main */
+main {
+  width: 100%;
+}
+
+.wid {
+  width: 86%;
+  height: 100vh;
+}
+
+p,
+ul {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+main ul li {
+  list-style: disc;
+}
+
+.ps {
+  top: 20px;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 426px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+  .wid {
+    width: 100%;
+  }
+
+  .search-bar {
+    background-color: #3b4acf66;
+  }
+
+  nav {
+    background: #151a48 !important;
+    margin-left: 0px !important;
+    padding: 16px 0px !important;
+    z-index: 100;
+  }
+
+  .nav-icon {
+    z-index: 200;
+    margin-top: 5px;
+    color: #fff;
+  }
+
+  .nav-img img {
+    margin-left: 13px !important;
+  }
+
+  .arrow-return {
+    font-size: 14px;
+    margin: 0 15px !important;
+    padding-left: 30px !important;
+  }
+
+  main {
+    height: auto;
+  }
+
+  h1 {
+    font-size: 12px;
+    margin-top: 50px;
+  }
+
+  .wid-sm {
+    width: 100% !important;
+  }
+
+  .mt {
+    margin-top: 55px;
+  }
+}

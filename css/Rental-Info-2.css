@@ -1,0 +1,234 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+/* global styling */
+p {
+    font-size: 14px;
+}
+
+h5 {
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+/* end of global styling */
+
+.side-nav-color {
+    background-color: #151a48 !important;
+    border-radius: 0 0 20px 0;
+    height: 45em;
+}
+
+button {
+    background-color: #151a48 !important;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.main-color {
+    background-color: #060d0d !important;
+}
+
+/* main */
+.col-1 {
+    width: 79%;
+    background-color: #151a48 !important;
+}
+
+.col-2 {
+    height: 36em;
+    width: 20%;
+    background-color: #151a48 !important;
+}
+
+.row {
+    column-gap: 10px;
+}
+
+.space-btw {
+    column-gap: 8px;
+}
+
+.log-out-button {
+    margin-top: 11em;
+}
+
+.space-btw-2 {
+    column-gap: 5px;
+}
+
+.box-size {
+    width: 14px;
+    height: 14px;
+}
+
+.profile-style {
+    width: 50px;
+    height: 50px;
+}
+
+.input-style {
+    height: 50px;
+    width: 25em;
+}
+
+.input-style-2 {
+    height: 50px;
+    width: 27em;
+}
+
+.input-style-3 {
+    height: 50px;
+    width: 830px;
+}
+
+.billing-input-style {
+    height: 50px;
+    width: 31em;
+}
+
+.rental-input-style {
+    height: 50px;
+    width: 4.5em;
+}
+
+input {
+    padding: 20px;
+    font-size: 13px;
+}
+
+.icon-style {
+    width: 35px;
+    height: 15px;
+}
+
+.nav-icon-style {
+    width: 15px;
+    height: 15px;
+}
+
+.date-gap {
+    column-gap: 70px;
+}
+
+.space-btw-3 {
+    column-gap: 5px;
+}
+
+.rental-padding {
+    padding: 50px 0 0 50px;
+}
+
+.padding {
+    padding: 0 0 0 50px;
+}
+
+/* billing box */
+.button-gap {
+    column-gap: 30px;
+}
+
+.lh-1 {
+    line-height: 1px !important;
+}
+
+/* phone responsiveness */
+@media screen and (max-width: 425px) {
+    .col-1 {
+        width: 95%;
+        background-color: #151a48 !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rental-padding {
+        padding: 30px 0 0 0;
+    }
+    
+    .padding {
+        padding: 0;
+    }
+
+    .padding-top {
+        padding-top: 30px;
+    }
+
+    .time {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-style {
+        height: 50px;
+        width: 20em;
+    }
+    
+    .input-style-2 {
+        height: 50px;
+        width: 20em;
+    }
+
+    .billing-input-style {
+        width: 20em;
+    }
+
+    .center {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+    .col-2 {
+        margin-top: 20px;
+        height: 37em;
+        width: 80%;
+    }
+
+}
+
+/* tablet responsiveness */
+@media screen and (min-width: 425px) and (max-width: 850px) {
+    .col-1 {
+        width: 100%;
+    }
+
+    .input-style {
+        height: 50px;
+        width: 18em;
+    }
+    
+    .input-style-2 {
+        height: 50px;
+        width: 23em;
+    }
+    
+    .input-style-3 {
+        height: 50px;
+        width: 830px;
+    }
+    .ms-3 {
+        padding-right: 40px;
+    }
+
+    .col-2 {
+        height: 44.5em;
+        width: 60%;
+        margin: 30px 150px;
+        margin-bottom: 10px;
+    }
+
+}
+

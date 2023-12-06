@@ -1,0 +1,294 @@
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+    outline: none !important;
+  }
+  
+  html, body { 
+   
+  font-family: 'Montserrat', sans-serif;
+  background-color: #09111a !important;
+  width: 100%;
+  padding: 0;
+  } 
+  
+  .sidecard {
+	background-color: #151A48 !important;
+	width: 15%;
+	height: 100vh;
+	border-radius: 15px;
+	margin-left: -1%;
+	position: fixed;
+  }
+  
+  .sidecard:hover {
+	background-color: #3b4acf66;
+  }
+  
+  .mynav {
+	border-radius: 25px;
+	margin-left: -1%;
+  }
+  
+  .mynav li a {
+	color: #fff;
+	text-decoration: none;
+	width: 100%;
+	display: block;
+	border-radius: 4px;
+	border-left: 50px;
+	padding: 8px 5px;
+  }
+  
+  .mynav li a.active {
+	background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .mynav li a:hover {
+	background-color: #3b4acf66;
+	width: 105%;
+	margin-left: -5%;
+	border-left: 40%;
+	border-left-color: #3b4acf66 !important;
+  }
+  
+  .mynav li a i {
+	width: 25px;
+	text-align: center;
+  }
+  
+  .notification-badge {
+	background-color: #09111a !important;
+	float: right;
+	font-size: 14px;
+	padding: 0px 8px;
+	border-radius: 2px;
+  }
+  
+  main {
+	width: 100%;
+  }
+  
+  .wid {
+	width: 86%;
+	height: 100vh;
+  }
+  
+  @media screen and (min-width: 320px) and (max-width: 675px) {
+	.wid {
+	  width: 100%;
+	}
+  
+	.wid-sm {
+	  margin-left: 40px;
+	  width: 90% !important;
+	}
+  
+	.mt {
+	  margin-top: 55px;
+	}
+  }
+  
+  .btn-border{
+  border: .1em solid white;
+  background-color: #151A48;
+  padding: 1em 2em;
+  border-radius: .8em;
+  } 
+  
+  .bell{
+  border:4px solid #3B4ACF;
+  }
+  
+  .bg-car-small{
+  border: 2px solid white;
+  }
+  
+ 
+  .font-size{
+	font-size: 1em;
+  }
+  
+  .gap-nav{
+	gap: 2em;
+  }
+  
+  .search-bar {
+  width: 60%;
+  background-color: #084387;
+  border-radius: 20px;
+  padding: 3px 10px;
+  }
+  
+  .search-input {
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  color: white;
+  }
+  
+  .search-input:focus {
+  outline: none;
+  }
+  
+  nav{
+	z-index: 1000;
+  
+  }
+  
+  ::placeholder {
+	color: white;
+	font-size: 1.2em;
+	padding-left: 1em;
+	opacity: 1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12 -18 */
+	color: white;
+	font-size: 1.2em;
+	padding-left: 1em;
+  }
+  
+  .bg-search{
+	background-color: #3B4ACF;
+  }
+  
+  
+  .bell{
+	  border:4px solid #3B4ACF;
+  }
+
+  input::placeholder {
+	  font-weight: 300;
+	  font-size: em;
+	  color: #fff;
+	  font-size: 1.5em;
+	  width: 50% !important;
+	  opacity: 0.6;
+	  
+	}
+  
+   .bg-search{
+	  background-color: #3B4ACFCC !important;
+   }
+  
+   #bdSidebar{
+	  border-radius: 0em 3em 2em 0em;
+   }
+  
+  #bdSidebar{
+	  height: 100vh;
+  }
+  
+  
+  /* MEDIA QUERY */
+  /*  MOBILE PHONE view*/
+  @media screen and (max-width: 884px) {
+    .right-pad{
+        padding-right: 0em !important;
+        }
+
+    .word-heading, .text-end-page{
+        font-size: 1em !important;
+        }
+        
+    .word-content{
+    font-size: 1em !important;
+    }
+
+    .white-search-bar {
+        width: 100% !important;
+        
+        }
+
+    #width{
+        width: 100% !important;
+    }
+
+    .img-fluid{
+        width: 1.4em !important;
+    }
+
+    .footer{
+        font-size: .8em !important;
+    }
+
+    nav{
+        justify-content: center !important;
+    }
+
+    .gap-support{
+      gap: 7em !important;
+    }
+
+    .first-text{
+      text-align: center !important;
+    }
+
+  }
+
+#width{
+    width: 70%;
+}
+
+.word{
+line-height: 1.8em;
+}
+
+.word-heading{
+font-size: 1.3em;
+}
+
+.word-content{
+font-size: 1.3em;
+}
+
+.right-pad{
+padding-right: 4em;
+}
+
+.foundation-container-col{
+background-color: #151A48;
+}
+
+.white-search-bar {
+width: 60%;
+background-color: white;
+border-radius: 20px;
+padding: 3px 10px;
+}
+
+#white-search::placeholder {
+    color:#151A48 ;
+    font-size: 1em;
+}
+.search-btn{
+    color:#151A48 ;
+}
+
+  .active {
+    background: #3b4acf66 !important;
+    padding: 1em 0em;
+    width: 105%;
+
+  }
+
+
+  .button{
+    background-color: #3B4ACF !important;
+  }
+
+  .round-bg{
+    background-color: #1B215D !important;
+  }
+
+  .gap-support{
+    gap: 10em;
+   
+  }
+
+  .button-support{
+    color: #3B4ACF !important;
+  }

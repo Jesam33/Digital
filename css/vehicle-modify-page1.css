@@ -1,0 +1,196 @@
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+  outline: none !important;
+  }
+  
+  html, body { 
+   
+  font-family: 'Montserrat', sans-serif;
+  background-color: #09111a !important;
+  width: 100%;
+  padding: 0;
+  } 
+  
+  .sidecard {
+	background-color: #151A48 !important;
+	width: 15%;
+	height: 100vh;
+	border-radius: 15px;
+	margin-left: -1%;
+	position: fixed;
+  }
+  
+  .sidecard:hover {
+	background-color: #3b4acf66;
+  }
+  
+  .mynav {
+	border-radius: 25px;
+	margin-left: -1%;
+  }
+  
+  .mynav li a {
+	color: #fff;
+	text-decoration: none;
+	width: 100%;
+	display: block;
+	border-radius: 4px;
+	border-left: 50px;
+	padding: 8px 5px;
+  }
+  
+  .mynav li a.active {
+	background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .mynav li a:hover {
+	background-color: #3b4acf66;
+	width: 105%;
+	margin-left: -5%;
+	border-left: 40%;
+	border-left-color: #3b4acf66 !important;
+  }
+  
+  .mynav li a i {
+	width: 25px;
+	text-align: center;
+  }
+  
+  .notification-badge {
+	background-color: #09111a !important;
+	float: right;
+	font-size: 14px;
+	padding: 0px 8px;
+	border-radius: 2px;
+  }
+  
+  main {
+	width: 100%;
+  }
+  
+  .wid {
+	width: 86%;
+	height: 100vh;
+  }
+  
+  @media screen and (min-width: 330px) and (max-width: 675px) {
+	.wid {
+	  width: 100%;
+	}
+  
+	.wid-sm {
+	  margin-left: 40px;
+	  width: 90% !important;
+	}
+  
+	.mt {
+	  margin-top: 55px;
+	}
+  .foundation-car{
+    background-position: 60%;
+    background-image: url(../assets/img/vehicle-modify-img/bg.png) !important;
+    
+  }
+ 
+  }
+  
+  
+  .btn-border{
+  border: .1em solid white;
+  background-color: #151A48;
+  padding: 1em 2em;
+  border-radius: .8em;
+  } 
+  
+  .bell{
+  border:4px solid #3B4ACF;
+  }
+  
+  #bdSidebar{
+  border-radius: 0em 3em 2em 0em;
+  }
+  
+  
+  .bg-car-small{
+  border: 2px solid white;
+  }
+  
+  .blue-bor{
+  border: 2px solid #3B4ACF !important;
+  }
+  
+  .font-size{
+	font-size: 1em;
+  }
+  
+  .gap-nav{
+	gap: 2em;
+  }
+  
+  .search-bar {
+  width: 60%;
+  background-color: #084387;
+  border-radius: 20px;
+  padding: 3px 10px;
+  }
+  
+  .search-input {
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  color: white;
+  }
+  
+  .search-input:focus {
+  outline: none;
+  }
+  
+  nav{
+	z-index: 1000;
+  
+  }
+  
+  ::placeholder {
+	color: white;
+	font-size: 1.2em;
+	padding-left: 1em;
+	opacity: 1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12 -18 */
+	color: white;
+	font-size: 1.2em;
+	padding-left: 1em;
+  }
+
+  .bg-car-small{
+    background-image: url(../assets/img/vehicle-modify-img/background.png);
+    background-repeat: no-repeat;
+    background-size: fixed;
+    padding: 5.5em;
+  }
+  
+  .foundation-car{
+    background-image: url(../assets/img/vehicle-modify-img/background_dark_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5em;
+    border-radius: 1em;
+  }
+
+  .button{
+    background-color: #3B4ACF !important;
+  }
+
+  .active {
+    background: #3b4acf66 !important;
+    padding: 1em 0em;
+    width: 105%;
+
+  }
+  
+  
+  

@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    max-height: 100vh;
+    max-width: 100%;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+    background-color: #151a48;
+    position: relative;
+}
+.car img{
+    position: relative;
+    height: auto;
+    display: flex;
+    top: -30px;
+
+}
+.bg_img{
+   position: absolute; 
+   bottom: 230px;
+   left: 0;
+
+}
+.bg_img2{
+    position: absolute; 
+   bottom: 150px;
+    left: 0;
+}
+.right{
+    z-index: 100;
+}
+main::before{
+content: "";
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+z-index: 8;
+background: linear-gradient(to bottom, rgba(18, 18, 49, 0.37), rgba(23, 19, 43, 0.329));
+}
+ main .container{
+   height: 80%;
+   width: 100%; 
+   display: flex; 
+}
+
+.general{
+    width: 100%;
+    height: 99vh;
+}
+ .half{
+    width: 100%;
+    height: 100%;
+ }
+ .height_500 {
+    height: auto;
+ }
+ .ashbackground{
+    background-color: #353f42;
+ }
+ .whitebackground{
+    background-color: #fff !important;
+ }
+.border_radius_10{
+    border-radius: 10px;
+}
+.big_heading {
+    font-size: 64px;
+}
+.white_color{
+    color: #fff;
+}
+.centralize{
+    text-align: center;
+}
+.fade{
+  opacity: 0.5;
+
+}
+.pad_20{
+    padding: 20px;
+}
+.margin_top_60 {
+    margin-top: 60px;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+.full_width{
+    width: 100%;
+}
+ .btn_style{
+    background-color: blue;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: center;
+    border-radius: 17px;
+    padding: 15px 40px 15px 40px;
+    margin-top : 25px;
+    gap: 8px;
+    color: #fff;
+    border: none;
+}
+.display_block{
+    display: block !important;
+}
+.display_flex{
+    display: flex !important;
+}
+.text_center{
+    text-align: center !important;
+}
+.bottom_text{
+    z-index: 150;
+}
+.button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button p{
+    color: #fff;
+    margin-top: 10px;
+}
+.button button{
+    width: 150px;
+    
+}

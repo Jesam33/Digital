@@ -1,0 +1,61 @@
+.btn-awa{
+    background-color: #4d924d !important;
+}
+.btn-pen{
+    background-color: #ffe500 !important;
+}
+.btn-boo{
+    background-color: #3b4acf !important;
+}
+.btn-comp{
+    background-color: #075618 !important
+}
+.btn-can{
+    background-color: #ff0000 !important;
+}
+.btn-con{
+    background-color: #709779;
+}
+#btn-style{
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#d-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.w-100{
+    width: 100% !important;
+    margin: auto !important;
+}
+.box{
+    margin-bottom: 20px !important;
+}
+.t{
+    margin-bottom: 20px !important;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: #ffffff !important;
+    border-bottom: 1px solid #ffffff;
+}
+.bg-black{
+    background-color: black;
+    color: #ffffff;
+}
+.m{
+        margin-bottom: 20px !important;
+        border-bottom: 1px solid green !important;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.pri-bg-col{
+    background-color: #151a48 !important;
+}
+.pri-bg-col{
+    background-color: #151a48 !important;
+}
