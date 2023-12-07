@@ -90,14 +90,14 @@ body {
 
 .search-bar {
     width: 60%;
-    background-color: #1b255b;
+    background-color: #151a48 !important;
     border-radius: 20px;
     padding: 3px 15px;
 }
 
 .search-input {
-    background-color: #1b255b;
-    width: 100%;
+    background-color: #151a48 !important;
+    /* width: 100%; */
     border: none;
     color: white;
 }
