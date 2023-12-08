@@ -27,7 +27,7 @@ async function submitRegistration() {
 
         // Make a POST request to the registration endpoint with CORS headers
         const response = await fetch(registrationEndpoint, {
-            method: 'GET',
+            method: 'POST',
             // mode: 'cors', // Add CORS mode
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
