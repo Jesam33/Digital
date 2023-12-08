@@ -1,40 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Password Toggle Example</title>
-  <!-- Assuming you have Bootstrap Icons included -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css">
-  <style>
-    .eye-icon {
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google fonts cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+
+    <!-- main styling -->
+    <link rel="stylesheet" href="./css/stlye.css" />
+
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+    <!-- Boxicons CSS  -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- subsidiary styling -->
+    <link rel="stylesheet" href="./css/subsidiary.css" />
+    <title>RIDEREADY</title>
+
+    <!-- AOS link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- users-dashboard styling -->
+    <link rel="stylesheet" href="./css/users-dashboard.css" />
 </head>
+
 <body>
+    <div class="">
+        <div id="bdSidebar" class="sidecard d-flex flex-column mt flex-shrink-1 text-white offcanvas-md offcanvas-start">
+            <img src="./assets/img/Ride-ready1.png" alt="" style="padding: 30px; width: 100%; margin-left: 10px" />
+            <ul class="mynav nav nav-pills flex-column mb-auto ms-4 pt-3 gap-3">
+                <li class="nav-item mb-1 fs-6">
+                    <a href="users-dashboard.html" class="active">
+                        <!-- <img src="./assets/img/dashboard-icon.png" alt="" style="margin: 3px; width: 10px" /> -->
+                        <i class="bx bxs-layout fs-5 ms-2"></i> Dashboard
+                    </a>
+                </li>
 
-<input type="password" id="password">
-<i class="eye-icon bi bi-eye" id="show-eye" onclick="togglePasswordVisibility(true)"></i>
-<i class="eye-icon bi bi-eye-slash" id="hide-eye" style="display: none;" onclick="togglePasswordVisibility(false)"></i>
+                <li class="nav-item mb-1">
+                    <a href="./vehicle/vehicles.html">
+                        <!-- <img src="./assets/img/vehicle-icon.png" alt="" style="margin: 3px; width: 11px" /> -->
+                        <i class="bx bxs-car fs-5"></i> Vehicle
+                    </a>
+                </li>
+                <li class="nav-item mb-1">
+                    <a href="booking-details-table.html" class="">
+                        <!-- <img src="./assets/img/booking-icon.png" alt="" style="margin: 3px; width: 9px" /> -->
+                        <i class="bx bxs-book-alt fs-5"></i> My Bookings
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="inbox-page.html" class="number">
+                        <div class="numberCircle">7</div>
+                        <img class="" src="./assets/img/mail-unread-fill.png" alt="" style="margin: 3px; width: 20px" /> Inbox
+                    </a>
+                </li>
+                <li class="nav-item mb-1">
+                    <a href="support-faq-page-1.html">
+                        <!-- <img src="./assets/img/help-icon.png" alt="" style="margin: 3px; width: 12px" /> -->
+                        <i class="bx bxs-help-circle fs-5"></i> Support
+                    </a>
+                </li>
 
-<script>
-  let password = document.getElementById("password");
-  let showEye = document.getElementById("show-eye");
-  let hideEye = document.getElementById("hide-eye");
+                <li class="sidebar-item nav-item mb-1">
+                    <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#settings" aria-expanded="false" aria-controls="settings">
+                        <!-- <img src="./assets/img/settings-5-fill.png" alt="" style="margin-left: 1px; width: 12px" /> -->
+                        <i class="bx bxs-cog fs-5"></i>
 
-  function togglePasswordVisibility(showPassword) {
-    if (showPassword) {
-      password.type = "text";
-      showEye.style.display = "none";
-      hideEye.style.display = "inline";
-    } else {
-      password.type = "password";
-      showEye.style.display = "inline";
-      hideEye.style.display = "none";
-    }
-  }
-</script>
+                        <span class="topic">Settings </span>
+                    </a>
+                    <ul id="settings" class="sidebar-dropdown list-unstyled collapse pt-4 px-lg-4" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="settings_profile.html" class="sidebar-link">
+                                <i class="fas fa-sign-in-alt pe-2"></i>
+                                <span class="topic">Account</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="d-flex my-5 px-4">
+                <button class="btn-border">
+              <a href="#" class="sidebar-link text-decoration-none text-white">
+                <div class="gap-1 d-flex align-items-center">
+                  <div>
+                    <i class="bx bxs-log-out fs-4 pt-1"></i>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <p class="mb-0 fs-8 pb-0 ms-2">Log Out</p>
+                  </div>
+                </div>
+              </a>
+            </button>
+            </div>
+        </div>
 
+        <div class="w-100 d-flex justify-content-end" style="height: 100vh; z-index: 100">
+            <div class="wid d-flex align-items-start">
+                <div class="p-2 d-md-none d-flex text-white">
+                    <a href="#" class="text-white" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar">
+                        <i class="fa-solid fa-bars nav-icon position-absolute ps"></i>
+                    </a>
+                </div>
+                <nav class="d-none d-lg-flex d-md-flex d-flex justify-content-evenly gap-5 align-items-center py-4 position-fixed w-75 ">
+                    <!-- <div class="back-nav ">
+                        <a href="./users-login.html">
+
+                        </a>
+                    </div> -->
+                    <div class="d-flex search-bar align-items-center rounded-pill text-white ms-0">
+                        <input type="text" class="w-100 search-input py-2 px-2 text-white" placeholder="Search a car" />
+                        <img class="me-3 bg-transparent" src="./assets/img/search-normal.png" alt="">
+                    </div>
+                    <div class="d-flex gap-nav justify-content-between align-items-center ms-5">
+                        <div class="p-2 rounded-circle bell ms-5 me-3">
+                            <a href="#"><i class='bx bxs-filter-alt fs-5 text-white pt-1'></i></a>
+                        </div>
+                        <div class="p-1 rounded-circle bell me-3">
+                            <a href="#"><i class='bx bxs-bell fs-2 text-white '></i></a>
+                        </div>
+                        <div class="rounded-circle bell" style="margin-right: -125px;">
+                            <img src="./assets/img/my-booking-details-img/dp.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </nav>
+                <main class="pt-5 px-sm-4" style="height: 100vh">
+                    <div class="mt-4">
+                        <h2 class="px-lg-5 text-white pt-5">Welcome Jane,</h2>
+                        <div id="book-a-car" class="px-lg-5 text-white pt-5 pb-lg-">
+                            <button type="button" id="" class="btn btn-primary btn-lg me-5">
+                        <a href="#" class=" text-decoration-none text-white"> 
+                        <p class="mb-0 fs-5 pb-0">Book a car</p>    
+                        </a>
+                            </button>
+                            <button type="button" class="btn text-white btn-outline-primary btn-lg me-3">
+                        <a href="#" class=" text-decoration-none text-white"> 
+                        <p class="mb-0 fs-5 pb-0">View reservation</p>    
+                        </a>
+                        </button>
+                            <button type="button" class="btn text-white btn-outline-primary btn-lg">
+                        <a href="#" class=" text-decoration-none text-white"> 
+                        <p class="mb-0 fs-5 pb-0">Manage Profile</p>    
+                        </a>
+                        </button>
+                        </div>
+                        <div class="card px-lg-4 mx-lg-5 mt-5 w-85 mb-3 text-white py-4">
+                            <div class="card-body d-flex">
+                                <div class="card-body">
+                                    <div class="">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h5 class="card-title ">Pick-up & return</h5>
+                                                <div class="d-flex card-bottom">
+                                                    <img src="./assets/img/search-normal.png" alt="search-icon">
+                                                    <p class="card-text ms-3">Location</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h5 class="card-title ">Pick-up date</h5>
+                                                <div class="d-flex card-bottom">
+                                                    <!-- <img src="./assets/img/search-normal.png" alt="search-icon"> -->
+                                                    <p class="card-text">Sept 12 | 3:00pm</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h5 class="card-title ">Return date</h5>
+                                                <div class="d-flex card-bottom">
+                                                    <!-- <img src="./assets/img/search-normal.png" alt="search-icon"> -->
+                                                    <p class="card-text">Sept 12 | 3:00pm</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pt-3">
+                                    <a href="./vehicle/vehicles.html" class="btn btn-primary">Show cars</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="px-lg-5 text-white pt-3">Ideal Rides For Your Journey</h4>
+                        <div class="col d-flex px-lg-5 text-white gap-4 pt-3">
+                            <div class="d-flex justify-content-between">
+                                <div class="card container">
+                                    <div class="cards mt-3">
+                                        <button class="btn btn-primary btn-sm" style="width: 60px;">2023</button>
+                                        <i class='bx bxs-heart fw-bold' style="font-size: 20px; margin-left: 150px;"></i>
+                                        <img class="ps-4 mb-4" src="./assets/img/car-audi-a3-audi-a4-car-3822c2bc08e2c2bce1d8ead0e70c7ddb.png" alt="">
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="">
+                                            <h6 class="mt-2">Urus</h6>
+                                        </div>
+                                        <div class="d-flex justify-content-between pt-2 pb-4 ">
+                                            <p>
+                                                <i class='bx bxs-star fs-6 star-col'></i>
+                                                <i class='bx bxs-star fs-6 star-col'></i>
+                                                <i class='bx bxs-star fs-6 star-col'></i>
+                                                <i class='bx bxs-star fs-6 star-col'></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <h3>Corolla 2021</h3>
+                                    <div class="">
+                                        <img src="./assets/img/Frame 1530.png" alt="suv">
+                                        <img class="ms-2" src="./assets/img/Frame 1533.png" alt="4">
+                                        <img class="ms-2" src="./assets/img/Frame 1534.png" alt="5">
+                                        <img class="ms-2" src="./assets/img/Frame 1535.png" alt="2">
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <button class="btn btn-primary btn-sm ms-0 pt-2 mt-4">
+                                <a class="text-decoration-none text-white" href="./car-details.html">View details</a>
+                            </button>
+                                        <p class="mt-4 fw-normal"><b class="fs-4">N5000/</b><span class="">DAY</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="card container">
+                                    <div class="cards mt-3">
+                                        <button class="btn btn-primary btn-sm" style="width: 60px;">2023</button>
+                                        <i class='bx bxs-heart fw-bold' style="font-size: 20px; margin-left: 150px"></i>
+                                        <img class="ps-4 mb-4" src="./assets/img/car-audi-a3-audi-a4-car-3822c2bc08e2c2bce1d8ead0e70c7ddb.png" alt="">
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="">
+                                            <h6 class="mt-2">Urus</h6>
+                                        </div>
+                                        <div class="d-flex justify-content-between pt-2 pb-4 ">
+                                            <p>
+                                                <i class='bx bxs-star fs-6 star-col'></i>
+                                                <i class='bx bxs-star fs-6 star-col'></i>
+                                                <i class='bx bxs-star fs-6 star-col'></i>
+                                                <i class='bx bxs-star fs-6 star-col'></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <h3>Corolla 2021</h3>
+                                    <div class="">
+                                        <img src="./assets/img/Frame 1530.png" alt="suv">
+                                        <img class="ms-2" src="./assets/img/Frame 1533.png" alt="4">
+                                        <img class="ms-2" src="./assets/img/Frame 1534.png" alt="5">
+                                        <img class="ms-2" src="./assets/img/Frame 1535.png" alt="2">
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <button class="btn btn-primary btn-sm ms-0 pt-2 mt-4">
+                                <a class="text-decoration-none text-white" href="./car-details.html">View details</a>
+                            </button>
+                                        <p class="mt-4 fw-normal"><b class="fs-4">N5000/</b><span class="">DAY</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="card container">
+                                    <div class="cards mt-3">
+                                        <button class="btn btn-primary btn-sm" style="width: 60px;">2023</button>
+                                        <i class='bx bxs-heart fw-bold' style="font-size: 20px; margin-left: 150px"></i>
+                                        <img class="ps-4" src="./assets/img/new image 2.png" alt="">
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="">
+                                            <h6 class="mt-2">Urus</h6>
+                                        </div>
+                                        <div class="d-flex justify-content-between pt-2 pb-4 ">
+                                            <p>
+                                                <i class='bx bxs-star fs-6 star-col'></i>
+                                                <i class='bx bxs-star fs-6 star-col'></i>
+                                                <i class='bx bxs-star fs-6 star-col'></i>
+                                                <i class='bx bxs-star fs-6 star-col'></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <h3>Corolla 2021</h3>
+                                    <div class="">
+                                        <img src="./assets/img/Frame 1530.png" alt="suv">
+                                        <img class="ms-2" src="./assets/img/Frame 1533.png" alt="4">
+                                        <img class="ms-2" src="./assets/img/Frame 1534.png" alt="5">
+                                        <img class="ms-2" src="./assets/img/Frame 1535.png" alt="2">
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <button class="btn btn-primary btn-sm ms-0 pt-2 mt-4">
+                                <a class="text-decoration-none text-white" href="./car-details.html">View details</a>
+                            </button>
+                                        <p class="mt-4 fw-normal"><b class="fs-4">N5000/</b><span class="">DAY</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="px-lg-5 text-white pt-5">Top Rentals this week</h4>
+                        <div class="card-rentals px-lg-4 mx-lg-5 mt-3 w-85 mb-3 text-white">
+                            <div class="d-flex ">
+                                <div class="">
+                                    <div class="">
+                                        <div class="row ">
+                                            <div class="col d-flex align-items-center justify-content-between">
+                                                <img style="width: 10%; margin-left: -20px;" class="" src="./assets/img/car-audi-a3-audi-a4-car-3822c2bc08e2c2bce1d8ead0e70c7ddb.png" alt="">
+                                                <p class="fs-5 fw-semibold me-2 pt-3">Porsche Taycan</p>
+                                                <p class="fs-5 fw-semibold ms-5 me-2 pt-3">Lagos, Nigeria</p>
+                                                <p class="fs-5 fw-light ms-4 me-4 pt-3">Nov 17 2023</p>
+                                                <img class="" src="./assets/img/Vector (1).png" alt="">
+                                                <p class="fs-5 fw-light ms-3 pt-3">7:00 PM</p>
+                                                <p class="fs-5 fw-semibold ms-5 ps-5 pt-3">By Daniel</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-rentals px-lg-4 mx-lg-5 mt-3 w-85 mb-3 text-white">
+                            <div class="d-flex ">
+                                <div class="">
+                                    <div class="">
+                                        <div class="row ">
+                                            <div class="col d-flex align-items-center justify-content-between">
+                                                <img style="width: 10%; margin-left: -20px;" class="" src="./assets/img/car-audi-a3-audi-a4-car-3822c2bc08e2c2bce1d8ead0e70c7ddb.png" alt="">
+                                                <p class="fs-5 fw-semibold me-2 pt-3">Porsche Taycan</p>
+                                                <p class="fs-5 fw-semibold ms-5 me-2 pt-3">Lagos, Nigeria</p>
+                                                <p class="fs-5 fw-light ms-4 me-4 pt-3">Nov 17 2023</p>
+                                                <img class="" src="./assets/img/Vector (1).png" alt="">
+                                                <p class="fs-5 fw-light ms-3 pt-3">7:00 PM</p>
+                                                <p class="fs-5 fw-semibold ms-5 ps-5 pt-3">By Daniel</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-rentals px-lg-4 mx-lg-5 mt-3 w-85 mb-3 text-white">
+                            <div class="d-flex ">
+                                <div class="">
+                                    <div class="">
+                                        <div class="row ">
+                                            <div class="col d-flex align-items-center justify-content-between">
+                                                <img style="width: 10%; margin-left: -20px;" class="" src="./assets/img/car-audi-a3-audi-a4-car-3822c2bc08e2c2bce1d8ead0e70c7ddb.png" alt="">
+                                                <p class="fs-5 fw-semibold me-2 pt-3">Porsche Taycan</p>
+                                                <p class="fs-5 fw-semibold ms-5 me-2 pt-3">Lagos, Nigeria</p>
+                                                <p class="fs-5 fw-light ms-4 me-4 pt-3">Nov 17 2023</p>
+                                                <img class="" src="./assets/img/Vector (1).png" alt="">
+                                                <p class="fs-5 fw-light ms-3 pt-3">7:00 PM</p>
+                                                <p class="fs-5 fw-semibold ms-5 ps-5 pt-3">By Daniel</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-rentals px-lg-4 mx-lg-5 mt-3 w-85 mb-3 text-white">
+                            <div class="d-flex ">
+                                <div class="">
+                                    <div class="">
+                                        <div class="row ">
+                                            <div class="col d-flex align-items-center justify-content-between">
+                                                <img style="width: 10%; margin-left: -20px;" class="" src="./assets/img/car-audi-a3-audi-a4-car-3822c2bc08e2c2bce1d8ead0e70c7ddb.png" alt="">
+                                                <p class="fs-5 fw-semibold me-2 pt-3">Porsche Taycan</p>
+                                                <p class="fs-5 fw-semibold ms-5 me-2 pt-3">Lagos, Nigeria</p>
+                                                <p class="fs-5 fw-light ms-4 me-4 pt-3">Nov 17 2023</p>
+                                                <img class="" src="./assets/img/Vector (1).png" alt="">
+                                                <p class="fs-5 fw-light ms-3 pt-3">7:00 PM</p>
+                                                <p class="fs-5 fw-semibold ms-5 ps-5 pt-3">By Daniel</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap Script (including jQuery) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!-- font awesome script -->
+    <script src="https://kit.fontawesome.com/71668c805d.js" crossorigin="anonymous"></script>
+
+    <!-- boxicons script  -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!-- AOS script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- javaScipt link -->
+    <script src="./js/app.js"></script>
 </body>
+
 </html>
+

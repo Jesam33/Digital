@@ -51,13 +51,18 @@
                         </p>
 
                         <div class="row d-flex justify-content-center p-4 gap-3">
-                            <input type="" id="Name" style="width: 46px; height: 43px; border: none; border-radius: 10px" />
-                            <input type="" id="Name" style="width: 46px; height: 43px; border: none; border-radius: 10px" />
-                            <input type="" id="Name" style="width: 46px; height: 43px; border: none; border-radius: 10px" />
-                            <input type="" id="Name" style="width: 46px; height: 43px; border: none; border-radius: 10px" />
+                            <form action="" id="otp-verification-form">
+                                <form action="" id="otp-verification-form">
+                                    <input type="text" id="otp-input-1" style="width: 46px; height: 43px; border: none; border-radius: 10px; text-align: center;" maxlength="1" data-prev-input="" data-next-input="otp-input-2" />
+                                    <input type="text" id="otp-input-2" style="width: 46px; height: 43px; border: none; border-radius: 10px; text-align: center;" maxlength="1" data-prev-input="otp-input-1" data-next-input="otp-input-3" />
+                                    <input type="text" id="otp-input-3" style="width: 46px; height: 43px; border: none; border-radius: 10px; text-align: center;" maxlength="1" data-prev-input="otp-input-2" data-next-input="otp-input-4" />
+                                    <input type="text" id="otp-input-4" style="width: 46px; height: 43px; border: none; border-radius: 10px; text-align: center;" maxlength="1" data-prev-input="otp-input-3" />
+
+
+                                    <button type="submit" class="text-white btn">Log in</button>
+                                    <span class="d-flex justify-content-center gap-1 mb-5">Didn't receive the code? <a class="text-white" href="#">Resend it</a> </span>
+                                </form>                            
                         </div>
-                        <button type="submit" class="text-white btn">Log in</button>
-                        <span class="d-flex justify-content-center gap-1 mb-5">Didn't receive the code? <a class="text-white" href="#">Resend it</a> </span>
                     </div>
                 </div>
             </div>
@@ -84,7 +89,7 @@
     </script>
 
     <!-- javaScipt link -->
-    <script src="./js/app.js"></script>
+    <script src="./js/otp-users-verification.js"></script>
 
 </body>
 

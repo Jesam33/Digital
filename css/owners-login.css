@@ -3,6 +3,60 @@
 body{
     font-family: Montserrat;
 }
+
+/* Your existing styles */
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: hsla(240, 46%, 13%, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    max-width: 300px; /* Adjust the max-width as needed */
+    width: 90%; /* Adjust the width as needed */
+    height: 30% !important; /* Adjust the max-height as needed */
+    overflow-y: auto;
+    text-align: center;
+}
+
+.modal p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #fff; /* Adjust the color as needed */
+    margin-bottom: 20px;
+}
+
+.modal button {
+    background-color: #007bff; /* Adjust the background color as needed */
+    color: #fff; /* Adjust the text color as needed */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Your existing styles */
+
+
+/* modal */
+
 .main-background{
     width: 100%;
     height: 100vh;
@@ -113,7 +167,8 @@ body{
 }
 .right .owners{
     color: #FFFFFF;
-    background-color: #3B4ACF;
+    background-color: ;
+    background: #3B4ACF;
     width: 235px;
     font-weight: 900;
     height: 70px;
@@ -129,9 +184,11 @@ body{
 
 .right .users{
     width: 200px;
+    
     color: #FFFFFF;
     display: flex;
     justify-content: center;
+    border-radius: 5px 30px 0px 0px;
     align-items: center;
 }
 .right .users a{

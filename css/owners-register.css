@@ -86,6 +86,8 @@ body{
 }
 .right .owners{
     width: 200px;
+    background-color: #3B4ACF;
+    border-radius: 28px 4px 0px 0;
     color: #FFFFFF;
     display: flex;
     justify-content: center;
@@ -98,7 +100,7 @@ body{
 
 .right .users{
     color: #FFFFFF;
-    background-color: #3B4ACF;
+    
     width: 235px;
     font-weight: 900;
     height: 70px;

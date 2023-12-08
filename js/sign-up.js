@@ -1,78 +1,67 @@
+// Function to handle registration form submission
 async function submitRegistration() {
     try {
-        // Get user-entered values
-        const fullName = document.getElementById('full-name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const password = document.getElementById('password').value;
-        const confirmPassword = document.getElementById('confirm-password').value;
+        // Get user-entered values for registration
+        const registrationFullName = document.getElementById('full-name').value;
+        const registrationEmail = document.getElementById('email').value;
+        const registrationPhone = document.getElementById('phone').value;
+        const registrationPassword = document.getElementById('password').value;
 
         // Validate input fields
-        if (!fullName || !email || !phone || !password || !confirmPassword) {
-            // Display an alert for missing input
-            alert('Please fill in all the fields.');
+        if (!registrationFullName || !registrationEmail || !registrationPhone || !registrationPassword) {
+            alert('Please fill in all required fields for registration.');
             return;
         }
 
         // API endpoint for registration
         const registrationEndpoint = 'https://riderider.onrender.com/api/v1/auth/register';
 
-        // Create a URLSearchParams object to encode the form data
-        const formData = new URLSearchParams();
-        formData.append('name', fullName); // Adjusted field name to 'name'
-        formData.append('email', email);
-        formData.append('phone', phone);
-        formData.append('password', password);
-        // formData.append('confirmPassword', confirmPassword);
-
-        // Make a POST request to the registration endpoint with CORS headers
-        const response = await fetch(registrationEndpoint, {
+        // Make a POST request to the registration endpoint
+        const registrationResponse = await fetch(registrationEndpoint, {
             method: 'POST',
-            // mode: 'cors', // Add CORS mode
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                // 'Access-Control-Allow-Origin': '*', // Replace with the actual allowed origin(s)
+                'Content-Type': 'application/json',
             },
-             body: formData
+            body: JSON.stringify({
+                fullName: registrationFullName,
+                email: registrationEmail,
+                phone: registrationPhone,
+                password: registrationPassword,
+            }),
         });
 
-        // Check if the response is successful (status code 2xx)
-        if (!response.ok) {
-            const errorMessage = await response.text(); // Get the error message from the response
-            throw new Error(`HTTP error! Status: ${response.status}. Message: ${errorMessage}`);
+        // Log the entire registration response to the console
+        console.log('Registration Response:', registrationResponse);
+
+        // Check if the registration response is successful (status code 2xx)
+        if (!registrationResponse.ok) {
+            const registrationErrorMessage = await registrationResponse.text();
+            throw new Error(`HTTP error during registration! Status: ${registrationResponse.status}. Message: ${registrationErrorMessage}`);
         }
 
-        // Parse the JSON response
-        const data = await response.json();
+        // Parse the JSON registration response
+        const registrationData = await registrationResponse.json();
 
-        // Log the entire data to the console
-        console.log('Data:', data);
 
-        // Display the message from the server
-        alert(data.message);
+        // Log the registration data to the console
+        console.log('Registration Data:', registrationData);
+        localStorage.setItem("token", registrationData.token)
 
-        // Redirect to OTP verification page if needed
-        if (data.message.includes('user has been created, an OTP has been sent to your email for verification')) {
-            window.location.href = 'otp-users-verification-page.html';
-        }
+        // Handle the registration success as needed
+        // For example, display a success message or redirect to a login page
+        alert('Registration successful! Please log in.');
+            // Redirect to another page after a successful login
+            window.location.href = 'otp-users-verification.html';
 
-          // Extract the token
-      const token = data.token;
-
-      // Store the token securely (consider using HttpOnly cookies or other secure storage methods)
-      localStorage.setItem('token', token);
-
-      // Redirect to another page after a successful login
-      window.location.href = "otp-users-verification.html";
-
-    } catch (error) {
-        console.error('Registration failed:', error.message);
-        alert('Registration failed. Please try again.');
+    } catch (registrationError) {
+        console.error('Registration failed:', registrationError.message);
+        // Display a pop-up or handle the error in a way appropriate for your application
+        alert('An error occurred during registration. Please try again.');
     }
 }
 
-// Add event listener to form submission
+// Add an event listener to the registration form to call the submitRegistration function on submission
 document.getElementById('registration-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the form from submitting traditionally
-    submitRegistration(); // Call your registration function
+    event.preventDefault(); // Prevent the default form submission behavior
+    submitRegistration(); // Call the submitRegistration function
 });
