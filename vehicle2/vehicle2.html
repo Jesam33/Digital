@@ -35,6 +35,8 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="../css/users-dashboard.css">
+
     <!-- subsidiary styling -->
     <link rel="stylesheet" href="./css/subsidiary.css" />
 
@@ -45,109 +47,79 @@
 
     <!-- AOS link -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/users-dashboard.css" />
   </head>
 
   <body>
     <div class="page-wrapper">
       <div id="bdSidebar" class="sidecard d-flex flex-column mt flex-shrink-1 text-white offcanvas-md offcanvas-start">
-        <img src="./assets/img/Ride-ready1.png" alt="" style="padding: 30px; width: 100%; margin-left: 10px" class="pt-5" />
-        <ul class="mynav nav-pills flex-column mt-4 px-lg-  ps-4 list-unstyled pe-4">
-            <li class="nav-item mb-4 active">
-                <a href="./users-dashboard.html">
-                    <div class="gap-4 d-flex">
-                        <div>
-                            <i class='bx bxs-layout fs-5'></i>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <p class="mb-0 fs-6 pb-0">Dashboard</p>
-                        </div>
-
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item mb-4 ">
-                <a href="./vehicle2/vehicle2.html">
-                    <div class="gap-4 d-flex ">
-                        <div>
-                            <i class='bx bxs-car fs-5'></i>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <p class="mb-0 fs-6 pb-0">Vehicle</p>
-                        </div>
-
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item mb-4">
-                <a href="./booking-details-table.html">
-                    <div class="gap-4 d-flex">
-                        <div>
-                            <i class='bx bxs-book-alt fs-5'></i>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <p class="mb-0 fs-6 pb-0">My Bookings</p>
-                        </div>
-
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item mb-4">
-                <a href="./inbox-page.html">
-                    <div class="gap-4 d-flex">
-                        <div>
-                            <i class='bx bxs-envelope fs-5'></i>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <p class="mb-0 fs-6 pb-0">Inbox</p>
-                        </div>
-
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item mb-4  ">
-                <a href="./support-card-issue.html">
-                    <div class="gap-4 d-flex">
-                        <div>
-                            <i class='bx bxs-help-circle fs-5'></i>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <p class="mb-0 fs-6 pb-0">Help and Support</p>
-                        </div>
-
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item mb-4  ">
-                <a href="./settings_profile.html">
-                    <div class="gap-4 d-flex">
-                        <div>
-                            <i class='bx bxs-cog fs-5'></i>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <p class="mb-0 fs-6 pb-0">Setting</p>
-                        </div>
-
-                    </div>
+        <img src="./assets/img/Ride-ready1.png" alt="" style="padding: 30px; width: 100%; margin-left: 10px" />
+        <ul class="mynav nav nav-pills flex-column mb-auto ms-4 pt-3 gap-3">
+            <li class="nav-item mb-1 fs-6">
+                <a href="../users-dashboard.html" >
+                    <!-- <img src="./assets/img/dashboard-icon.png" alt="" style="margin: 3px; width: 10px" /> -->
+                    <i class="bx bxs-layout fs-5 ms-2"></i> Dashboard
                 </a>
             </li>
 
+            <li class="nav-item mb-1">
+                <a href="../vehicle2/vehicle2.html" class="active">
+                    <!-- <img src="./assets/img/vehicle-icon.png" alt="" style="margin: 3px; width: 11px" /> -->
+                    <i class="bx bxs-car fs-5"></i> Vehicle
+                </a>
+            </li>
+            <li class="nav-item mb-1">
+                <a href="#" class="">
+                    <!-- <img src="./assets/img/booking-icon.png" alt="" style="margin: 3px; width: 9px" /> -->
+                    <i class="bx bxs-book-alt fs-5"></i> My Bookings
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="number">
+                    <div class="numberCircle">7</div>
+                    <img class="" src="../assets/img/mail-unread-fill.png" alt="" style="margin: 3px; width: 20px" /> Inbox
+                </a>
+            </li>
+            <li class="nav-item mb-1">
+                <a href="#">
+                    <!-- <img src="./assets/img/help-icon.png" alt="" style="margin: 3px; width: 12px" /> -->
+                    <i class="bx bxs-help-circle fs-5"></i> Support
+                </a>
+            </li>
+
+            <li class="sidebar-item nav-item mb-1">
+                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#settings" aria-expanded="false" aria-controls="settings">
+                    <!-- <img src="./assets/img/settings-5-fill.png" alt="" style="margin-left: 1px; width: 12px" /> -->
+                    <i class="bx bxs-cog fs-5"></i>
+
+                    <span class="topic">Settings </span>
+                </a>
+                <ul id="settings" class="sidebar-dropdown list-unstyled collapse pt-4 px-lg-4" data-bs-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">
+                            <i class="fas fa-sign-in-alt pe-2"></i>
+                            <span class="topic">Account</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
         <div class="d-flex my-5 px-4">
             <button class="btn-border">
-                <a href="./users-login.html" class="sidebar-link text-decoration-none text-white">
-                <div class="gap-1 d-flex">
-                    <div>
-                    <i class="bx bxs-log-out fs-4"></i>
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center">
-                    <a href="" class=" text-decoration-none text-white"><p class="mb-0 fs-8 pb-0">Log Out</p></a>
-                    </div>
-                </div>
-                </a>
-            </button>
+          <a href="#" class="sidebar-link text-decoration-none text-white">
+            <div class="gap-1 d-flex align-items-center">
+              <div>
+                <i class="bx bxs-log-out fs-4 pt-1"></i>
+              </div>
+              <div class="d-flex justify-content-center align-items-center">
+                <p class="mb-0 fs-8 pb-0 ms-2">Log Out</p>
+              </div>
+            </div>
+          </a>
+        </button>
         </div>
     </div>
-
       <div class="w-100 d-flex justify-content-end" style="height: 100vh">
         <div class="wid d-flex align-items-start">
           <div class="p-2 d-md-none d-flex text-white">

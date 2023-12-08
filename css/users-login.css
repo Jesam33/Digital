@@ -1,24 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&family=Pacifico&family=Raleway&family=Rufina:wght@700&display=swap');
-body {
+
+body{
     font-family: Montserrat;
 }
-
-.main-background {
+.main-background{
     width: 100%;
     height: 100vh;
     background: radial-gradient(circle, #181c4d, #020206);
+
+    /* overflow: hidden;
+    position: relative; */
+    
+}
+.main-background::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(18, 18, 49, 0.356), rgba(23, 19, 43, 0.329));
+    z-index: 3; 
+}
+.main-background .general{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    text-align: center;
+    align-content: center;
 }
-
-.general .left {
-    width: 720px;
-    max-height: 404.74px;
-    flex-direction: column;
+.general .left{
+    width: 45%;
+    display: flex; 
 }
-
-.general .left p {
+.logo img{
+    position: relative;
+    top: 50px;
+    z-index: 100;
+    width: 50%;
+}
+.car-img img{
+    height: auto;
+    width: 100%;
+    border-radius: 10px; 
+    position: relative;
+    z-index: 2;
+    display: flex;   
+}
+.general .left p{
     font-size: 24px;
     font-weight: 500;
     line-height: 29px;
@@ -27,105 +55,44 @@ body {
     width: 476px;
     margin-top: 40px;
 }
-
-.blue-frame .frame-1 {
+.blue-frame .frame-1 img{
     position: absolute;
-    bottom: 270px;
+    bottom: 280px;
+    width: 200px;
+    
+   
 }
-
-.blue-frame .frame-2 {
+.blue-frame .frame-2 img{
     position: absolute;
-    bottom: 190px;
+    bottom: 220px;
+    width: 200px;
+    
 }
-
-.main-background .left h3 {
-    font-family: Montserrat;
-    color: #FFFFFF;
-    font-size: 64px;
-    font-weight: 900;
-    line-height: 78px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-
-.main-background {
-    /* width: 642px;
-    height: 404.74px; */
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    overflow: hidden;
-    position: relative;
-    /* background: linear-gradient(rgba(17, 15, 41, 0.226), rgba(35, 30, 77, 0.315)), 
-    url('../assets/img/ride-ready.png'); */
-    /* background-image: url(../assets/img/ride-ready.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-     */
-}
-
-.main-background::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(to bottom, rgba(18, 18, 49, 0.356), rgba(23, 19, 43, 0.329));
-    z-index: 3;
-}
-
-.logo img {
-    position: relative;
-    top: 50px;
-    z-index: 100;
-}
-
-.car-img img {
-    /* width: 100%; */
-    height: auto;
-    border-radius: 10px;
-    position: relative;
-    z-index: 2;
-    display: flex;
-    /* top: -100px; */
-}
-
-.main-background .left {
-    width: 50%;
-}
-
-.general {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.general .right {
-    max-width: 600px;
+.general .right{
     z-index: 5;
+    width: 40%;
+    height: 100vh;
+    display: flex;  
+    align-items: center;
 }
-
-.card-body {
+.right-card{
     background-color: #35353B;
     border-radius: 29px;
     color: #FFFFFF;
 }
-
-.right .owners {
+.right .owners{
     width: 200px;
     color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.right .owners a {
+.right .owners a{
     color: #fff;
     text-decoration: none;
 }
 
-.right .users {
+.right .users{
     color: #FFFFFF;
     background-color: #3B4ACF;
     width: 235px;
@@ -134,74 +101,73 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5px 30px 0px 0;
+    border-radius: 4px 28px 0px 0;
+    margin: 5px !important;
 }
-
-.right .users a {
+.right .users a{
     color: #fff;
     text-decoration: none;
 }
-
-.card-body h4 {
-    margin: 30px 0 30px 0;
+.right-card h4{
+    margin: 15px 0 15px 0;
     font-size: 32px;
     font-weight: 700;
 }
-
-.forgot-password a {
+.forgot-password a{
     color: #FFFFFF;
 }
-
-.input-box {
-    background: #fff;
+.input-box{
+    text-align: left;
+    margin: auto;
+    width: 90%;
+    font-size: 13px;
+}
+.box{
     display: flex;
     align-items: center;
-    width: 100%;
-    padding: 2px 5px 2px 2px;
+    background-color: #FFFFFF;
+    outline: transparent;
     border-radius: 8px;
-    margin-bottom: 5px;
-}
+    padding: 2px 5px 2px 2px;
 
-.input-box input {
+}
+.box i{
+    color: #9B9B9B;
+    font-size: 15px;
+}
+.input-box .box input{
     outline: 0;
     width: 100%;
-    /* padding: 10px 0; */
     border: none;
     color: #555;
+    outline: transparent !important;
+    font-size: 15px;
+    
 }
-
-.input-box img {
-    font-size: 20px;
+/* .eye-icon {
     cursor: pointer;
 }
 
-.btn-cover {
+#hide-eye {
+    display: none;
+} */
+
+.btn-cover{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
-.lines {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin: 20px 0;
-}
-
-.line1 {
-    width: 169px;
-    border: 1px solid #FFFFFF;
-}
-
-.icons {
+.icons{
     display: flex;
     justify-content: center;
     gap: 50px;
+    
+    
 }
-
-.icon img {
+.icon img{
     width: 35px;
     height: 35px;
     display: flex;
@@ -209,51 +175,60 @@ body {
     align-items: center;
 }
 
+
 @media only screen and (max-width: 767px) {
-    .main-background {
+    .main-background{
         width: 100%;
         height: 120vh;
-        background: #060D0D;
-        overflow: visible;
+        background: #060D0D; 
+        overflow: visible; 
         overflow-x: hidden;
+        
+      
     }
-    .general {
+    .general{
         flex-direction: column;
         margin: 0;
         position: relative;
+        
     }
-    .logo img {
+    .logo img{
         width: 50%;
         position: absolute;
         top: -180px;
         left: 95px;
     }
-    .car-img {
+    .car-img{
         visibility: collapse;
     }
-    .left p {
+    .left p{
         visibility: collapse;
     }
-    .blue-frame {
+    .blue-frame{
         visibility: collapse;
     }
-    .right {
+    .right{
         width: 100%;
         position: absolute;
         top: -135px;
+         
     }
-    .main-background::before {
+    .main-background::before{
         visibility: collapse;
     }
-    .card-body {
+    .right-card{
         background: #060D0D;
         padding: 0;
     }
-    .line1 {
+    .line1{
         width: 100px;
         border: 1px solid #FFFFFF;
     }
-    .input-box {
+    .input-box{
         margin: 0;
     }
+   
+    
+    
+    
 }

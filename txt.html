@@ -1,64 +1,40 @@
-async function forgetPassword() {
-  console.log('Forgot password called')
-  try {
-      // Get user-entered values
-      const forgetEmail = document.getElementById('forget-input').value;
-      // const password = document.getElementById('password').value;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Toggle Example</title>
+  <!-- Assuming you have Bootstrap Icons included -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css">
+  <style>
+    .eye-icon {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
 
-      // API endpoint for login
-      const forgetPasswordEndpoint = 'https://riderider.onrender.com/api/v1/auth/forget-password';
+<input type="password" id="password">
+<i class="eye-icon bi bi-eye" id="show-eye" onclick="togglePasswordVisibility(true)"></i>
+<i class="eye-icon bi bi-eye-slash" id="hide-eye" style="display: none;" onclick="togglePasswordVisibility(false)"></i>
 
-      // Make a POST request to the authentication endpoint
-      const response = await fetch(forgetPasswordEndpoint, {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ forgetEmail }),
-      });
+<script>
+  let password = document.getElementById("password");
+  let showEye = document.getElementById("show-eye");
+  let hideEye = document.getElementById("hide-eye");
 
-      // Log the entire response to the console
-      console.log('Response:', response);
-
-      // Check if the response is successful (status code 2xx)
-      if (!response.ok) {
-          const errorMessage = await response.text(); // Get the error message from the response
-          throw new Error(`HTTP error! Status: ${response.status}. Message: ${errorMessage}`);
-      }
-
-      // Parse the JSON response
-      const data = await response.json();
-
-      // Log the data to the console
-      console.log('Data:', data);
-
-      // Check if the response contains a token property
-      if (data.status.ok) {
-          // console.error('Token not found in the response. Response Data:', data);
-          // Display a pop-up or handle the error in a way appropriate for your application
-          alert(data.message);
-      window.location.href = "otp-users-verification.html";
-          return; // Exit the function if login is unsuccessful
-      }
-
-      // Extract the token
-      const token = data.token;
-
-      // Store the token securely (consider using HttpOnly cookies or other secure storage methods)
-      localStorage.setItem('token', token);
-
-      // Redirect to another page after a successful login
-      window.location.href = "otp-users-verification.html";
-  } catch (error) {
-      console.error('forgot password failed:', error.message);
-      // Display a pop-up or handle the error in a way appropriate for your application
-      alert('An error occurred during login. Please try again.');
+  function togglePasswordVisibility(showPassword) {
+    if (showPassword) {
+      password.type = "text";
+      showEye.style.display = "none";
+      hideEye.style.display = "inline";
+    } else {
+      password.type = "password";
+      showEye.style.display = "inline";
+      hideEye.style.display = "none";
+    }
   }
-}
+</script>
 
-// Add an event listener to the login form to call the submitLogin function on submission
-document.getElementById('forget-form').addEventListener('submit', function (event) {
-  console.log(event)
-  event.preventDefault(); // Prevent the default form submission behavior
-  forgetPassword(); // Call the submitLogin function
-});
+</body>
+</html>

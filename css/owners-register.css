@@ -1,142 +1,238 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-main{
-    max-height: 100vh;
-    max-width: 100%;
-    display: flex;
-    flex-direction:column ;
-    align-items: center;
-    justify-content: center;
-    background-color: #151a48;
-    position: relative;
-}
-.car img{
-    position: relative;
-    height: auto;
-    display: flex;
-    top: -30px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&family=Pacifico&family=Raleway&family=Rufina:wght@700&display=swap');
 
+body{
+    font-family: Montserrat;
 }
-.bg_img{
-   position: absolute; 
-   bottom: 230px;
-   left: 0;
+.main-background{
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, #181c4d, #020206);
 
+    /* overflow: hidden;
+    position: relative; */
+    
 }
-.bg_img2{
-    position: absolute; 
-   bottom: 150px;
+.main-background::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
+    background: linear-gradient(to bottom, rgba(18, 18, 49, 0.356), rgba(23, 19, 43, 0.329));
+    z-index: 5; 
 }
-.right{
-    z-index: 100;
-}
-main::before{
-content: "";
-position: absolute;
-top: 0;
-right: 0;
-left: 0;
-bottom: 0;
-z-index: 8;
-background: linear-gradient(to bottom, rgba(18, 18, 49, 0.37), rgba(23, 19, 43, 0.329));
-}
- main .container{
-   height: 80%;
-   width: 100%; 
-   display: flex; 
-}
-
-.general{
-    width: 100%;
-    height: 99vh;
-}
- .half{
-    width: 100%;
-    height: 100%;
- }
- .height_500 {
-    height: auto;
- }
- .ashbackground{
-    background-color: #353f42;
- }
- .whitebackground{
-    background-color: #fff !important;
- }
-.border_radius_10{
-    border-radius: 10px;
-}
-.big_heading {
-    font-size: 64px;
-}
-.white_color{
-    color: #fff;
-}
-.centralize{
+.main-background .general{
+    display: flex;
+    justify-content: space-between;
     text-align: center;
+    align-content: center;
 }
-.fade{
-  opacity: 0.5;
-
+.general .left{
+    width: 45%;
+    display: flex; 
 }
-.pad_20{
-    padding: 20px;
+.general .left text p{
+    font-size: 10px;
 }
-.margin_top_60 {
-    margin-top: 60px;
-    font-family: 'Manrope', sans-serif;
-    font-family: 'Montserrat', sans-serif;
+.logo img{
+    /* position: relative;
+    top: 50px; */
+    z-index: 100;
+    width: 50%;
+}
+.car-img img{
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    z-index: 2;
+    display: flex;   
+}
+.general .left p{
     font-size: 24px;
     font-weight: 500;
     line-height: 29px;
-    letter-spacing: 0em;
     text-align: center;
+    color: #FFFFFF;
+    width: 476px;
+    z-index: 1;
+    /* margin-top: 40px; */
+}
+.blue-frame .frame-1 img{
+    position: absolute;
+    bottom: 280px;
+    width: 200px;
+    z-index: 1;
+    
+   
+}
+.blue-frame .frame-2 img{
+    position: absolute;
+    bottom: 220px;
+    width: 200px;
+    
+}
+.general .right{
+    z-index: 5;
+    width: 40%;
+    height: 100vh;
+    display: flex;  
+    align-items: center;
+}
+.right-card{
+    background-color: #35353B;
+    border-radius: 29px;
+    color: #FFFFFF;
+}
+.right .owners{
+    width: 200px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right .owners a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.right .users{
+    color: #FFFFFF;
+    background-color: #3B4ACF;
+    width: 235px;
+    font-weight: 900;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px 28px 0px 0;
+    margin: 5px !important;
+}
+.right .users a{
+    color: #fff;
+    text-decoration: none;
+}
+.right-card h4{
+    margin: 15px 0 15px 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+.forgot-password a{
+    color: #FFFFFF;
+}
+.input-box{
+    text-align: left;
+    margin: auto;
+    width: 90%;
+    font-size: 13px;
+}
+.box{
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    outline: transparent;
+    border-radius: 8px;
+    padding: 2px 5px 2px 2px;
 
 }
-.full_width{
+.box i{
+    color: #9B9B9B;
+    font-size: 15px;
+}
+.input-box .box input{
+    outline: 0;
     width: 100%;
-}
- .btn_style{
-    background-color: blue;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0em;
-    text-align: center;
-    border-radius: 17px;
-    padding: 15px 40px 15px 40px;
-    margin-top : 25px;
-    gap: 8px;
-    color: #fff;
     border: none;
+    color: #555;
+    outline: transparent !important;
+    font-size: 15px;
+    
 }
-.display_block{
-    display: block !important;
+/* .eye-icon {
+    cursor: pointer;
 }
-.display_flex{
-    display: flex !important;
-}
-.text_center{
-    text-align: center !important;
-}
-.bottom_text{
-    z-index: 150;
-}
-.button{
+
+#hide-eye {
+    display: none;
+} */
+
+.btn-cover{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
-.button p{
-    color: #fff;
-    margin-top: 10px;
+
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    
+    
 }
-.button button{
-    width: 150px;
+.icon img{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .main-background{
+        width: 100%;
+        height: 120vh;
+        background: #060D0D; 
+        overflow: visible; 
+        overflow-x: hidden;
+        
+      
+    }
+    .general{
+        flex-direction: column;
+        margin: 0;
+        position: relative;
+        
+    }
+    .logo img{
+        width: 50%;
+        position: absolute;
+        top: -180px;
+        left: 95px;
+    }
+    .car-img{
+        visibility: collapse;
+    }
+    .left p{
+        visibility: collapse;
+    }
+    .blue-frame{
+        visibility: collapse;
+    }
+    .right{
+        width: 100%;
+        position: absolute;
+        top: -135px;
+         
+    }
+    .main-background::before{
+        visibility: collapse;
+    }
+    .right-card{
+        background: #060D0D;
+        padding: 0;
+    }
+    .line1{
+        width: 100px;
+        border: 1px solid #FFFFFF;
+    }
+    .input-box{
+        margin: 0;
+    }
+   
+    
+    
     
 }
